@@ -25,4 +25,4 @@ Retenons que dans le cas qui nous occupe le support numérique est potentielleme
 - s'il encourage fortement le partage à d'autres lecteurs,
 - si l'impact des pages est supérieur à la moyenne. 
 
-Nous serons donc particulièrement attentifs à ces trois aspects dans la conception et le prototypage qui va suivre.
+Nous serons donc particulièrement attentifs à ces trois risques dans la conception et le prototypage qui vont suivre.
