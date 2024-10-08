@@ -26,3 +26,50 @@ Retenons que dans le cas qui nous occupe le support numérique est potentielleme
 - si l'impact des pages est supérieur à la moyenne. 
 
 Nous serons donc particulièrement attentifs à ces trois risques dans la conception et le prototypage qui vont suivre.
+
+## Scénarios d'usage et impacts
+
+Nous faisons l'hypothèse que le journal est lu plusieurs fois dans la journée lors de moments de pause de quelques dizaines de minutes (dans les transports en commun, après le repas de midi, avant de se coucher, etc.).
+Pour cette raison, nous prendrons en compte dans notre scénario la lecture de deux articles l'un à la suite de l'autre, afin d'apprécier l'effet bénéfique du cache.
+
+Par ailleurs nous distinguerons la lecture des articles du jour et ceux d'une rubrique (Politique, Environnement, etc.), plus spécifiques mais possiblement plus anciens.
+
+## Scénario : "Lire des articles parmi les articles du jour"
+
+1. Le lecteur du journal se rend sur la "une" du journal grâce à un favori (donc sans passer par un moteur de recherche). Si nécessaire, il donne son consentement. Puis il consulte les titres.
+2. Il choisit un des articles et le lit jusqu'au bout.
+3. Il revient aux titres de la "une" et les consulte.
+4. Il choisit un autre article et le lit jusqu'au bout.
+
+
+## Scénario : "Lire des articles d'une rubrique donnée"
+
+1. Le lecteur du journal se rend sur la "une" du journal grâce à un favori (donc sans passer par un moteur de recherche).  Si nécessaire, il donne son consentement.
+2. Il choisit une des rubriques. Puis il consulte ses titres.
+3. Il choisit un des articles et le lit jusqu'au bout.
+4. Il revient aux titres de la rubrique et les consulte.
+5. Il choisit un autre article et le lit jusqu'au bout.
+
+## Impact de l'exécution des scénarios auprès de différents services concurrents
+
+L'EcoIndex d'une page (de A à G) est calculé (sources : [EcoIndex](https://www.ecoindex.fr/comment-ca-marche/), [Octo](https://blog.octo.com/sous-le-capot-de-la-mesure-ecoindex), [GreenIT](https://github.com/cnumr/GreenIT-Analysis/blob/acc0334c712ba68939466c42af1514b5f448e19f/script/ecoIndex.js#L19-L44)) en fonction du positionnement de cette page parmi les pages mondiales concernant :
+
+- le nombre de requêtes lancées,
+- le poids des téléchargements,
+- le nombre d'éléments du document.
+
+Nous avons choisi de comparer l'impact des scénarios sur le services de différents quotidiens nationaux, de sensibilités politiques, économiques et environementales différentes :
+
+- Le Figaro (bientôt),
+- Le Monde (bientôt),
+- La Croix,
+- Libération (bientôt),
+- L'Humanité,
+- Reporterre (à titre de comparaison, même si ce n'est pas à proprement parler un quotidien).
+
+Les résultats sont les suivants (attention, d'une journée à l'autre, on peut observer une certaine variabilité) :
+
+- Scénario "[Lire des articles parmi les articles du jour](https://htmlpreview.github.io/?https://raw.githubusercontent.com/UTT-GL03/QVOTIDIE/main/benchmark/benchmark.html)",
+- Scénario "Lire des articles d'une rubrique donnée (bientôt)".
+
+
