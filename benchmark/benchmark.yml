@@ -19,6 +19,7 @@
       element: >
         .header-component__right-container > a[aria-label="Page d'accueil"]
       pageChange: true
+      waitForSelector: .alaune
     - name: Consulter les titres
       type: scroll
     - name: Choisir un autre article
