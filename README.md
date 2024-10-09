@@ -58,7 +58,7 @@ L'EcoIndex d'une page (de A à G) est calculé (sources : [EcoIndex](https://www
 - le poids des téléchargements,
 - le nombre d'éléments du document.
 
-Nous avons choisi de comparer l'impact des scénarios sur le services de différents quotidiens nationaux, de sensibilités politiques, économiques et environementales différentes :
+Nous avons choisi de comparer l'impact des scénarios sur les services de quotidiens nationaux de diverses sensibilités politiques, économiques et environementales :
 
 - Le Figaro (bientôt),
 - Le Monde,
