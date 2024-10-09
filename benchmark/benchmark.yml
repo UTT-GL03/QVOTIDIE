@@ -1,3 +1,36 @@
+- name: Le Monde – Actualités
+  url: https://www.lemonde.fr/
+  actions:
+    - name: Accepter d'être suivi
+      type: click
+      element: text/Accepter et continuer
+      # screenshot: cookieOrNotCookie.png
+    - name: Consulter les titres
+      type: scroll
+      # screenshot: bottom.png
+    - name: Choisir un article
+      type: click
+      element: .article--river:nth-of-type(4) a
+      pageChange: true
+      waitForSelector: .article__paragraph
+      # screenshot: article1.png
+    - name: Lire l'article
+      type: scroll
+    - name: Revenir aux titres
+      type: click
+      element: text/Retour à la page d’accueil du Monde
+      pageChange: true
+    - name: Consulter les titres
+      type: scroll
+    - name: Choisir un autre article
+      type: click
+      element: .article--river:nth-of-type(5) a
+      pageChange: true
+      waitForSelector: .article__paragraph
+      # screenshot: article2.png
+    - name: Lire l'article
+      type: scroll
+
 - name: L'Humanité – Actualités
   url: https://www.humanite.fr/
   actions:
