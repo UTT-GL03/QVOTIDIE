@@ -1,7 +1,7 @@
 - name: L'Humanité – Actualités
   url: https://www.humanite.fr/
   actions:
-    - name: Refuser d'être suivi
+    - name: Accepter d'être suivi
       type: click
       element: '#sd-cmp button'
     - name: Consulter les titres
@@ -34,6 +34,9 @@
 - name: La Croix – Actualités
   url: https://www.la-croix.com/
   actions:
+    - name: Accepter d'être suivi
+      type: click
+      element: text/Accepter & Fermer
     - name: Consulter les titres
       type: scroll
     - name: Choisir un article
