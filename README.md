@@ -72,4 +72,18 @@ Les résultats sont les suivants (attention, d'une journée à l'autre, on peut 
 - Scénario "[Lire des articles parmi les articles du jour](https://htmlpreview.github.io/?https://raw.githubusercontent.com/UTT-GL03/QVOTIDIE/main/benchmark/benchmark.html)",
 - Scénario "Lire des articles d'une rubrique donnée (bientôt)".
 
+## Maquette de l'interface et échantillon de données
 
+Au vu des différents services comparés, des exigences environnementales exprimées plus haut et des scénarios retenus, nous avons défini pour notre prototype une maquette de l'interface et un échantillon de données réalistes.
+
+L'interface retenue est composée de deux types de "pages Web" :
+
+- celle des titres des articles du jour ou d'une rubrique thématique,
+- celle d'un article.
+
+![Maquette des deux types de page](./frontend/mockup.png)
+__Fig.1__: Maquette de l'interface du prototype : __a.__ type de page pour les "titres" (du jour ou d'une rubrique), __b.__ type de page d'un article.
+
+Pour des raisons de respect des droits d'auteurs, nous utilisons des données générées (avec [`dummy-json`](https://dummyjson.com)).
+Bien que fictives, ces données correspondent à la structure des services concurrents : 20 à 30 articles comportant un titre possiblement long, un auteur et une rubrique (voir [modèle de données](./frontend/sample_data.hbs)). 
+Dans un objectif de sobriété environnementale, les articles sont limités à ceux du jour et de la veille.
