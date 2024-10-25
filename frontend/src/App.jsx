@@ -3,7 +3,9 @@ import data from './assets/sample_data.json'
 import './App.css'
 
 function App() {
-
+  const articlesByRow = Object.values(
+    Object.groupBy(data.articles, (x, i) => Math.floor(i/3))
+  )
   return (
     <>
       <header>
@@ -13,8 +15,12 @@ function App() {
         </h1>
       </header>
       <main className="container">
-        {data.articles.map((x, i) =>
-          <Headline {...x} key={i} />
+        {articlesByRow.map((x, i) =>
+          <div key={i} className="grid">
+            {x.map((y, j) =>
+              <Headline {...y} key={j} />
+            )}
+          </div>
         )}
       </main>
     </>
