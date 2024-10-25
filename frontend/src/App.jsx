@@ -1,6 +1,12 @@
 import reactLogo from './assets/react.svg'
+import dayjs from 'dayjs'
+import relativeTime from 'dayjs/plugin/relativeTime'
+import 'dayjs/locale/fr'
 import data from './assets/sample_data.json'
 import './App.css'
+
+dayjs.extend(relativeTime)
+dayjs.locale('fr')
 
 function App() {
   const articlesByRow = Object.values(
@@ -32,7 +38,7 @@ function Headline({heading, issued, section}) {
     <article>
       <header>
         <span className="tag"> {section} </span>
-        <time> {issued} </time>
+        <time> {dayjs(issued).fromNow()} </time>
       </header>
       <h2>{heading}</h2>
     </article>
