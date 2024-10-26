@@ -87,3 +87,35 @@ __Fig.1__: Maquette de l'interface du prototype : __a.__ type de page pour les "
 Pour des raisons de respect des droits d'auteurs, nous utilisons des données générées (avec [`dummy-json`](https://dummyjson.com)).
 Bien que fictives, ces données correspondent à la structure des services concurrents : 20 à 30 articles comportant un titre possiblement long, un auteur et une rubrique (voir [modèle de données](./frontend/sample_data.hbs)). 
 Dans un objectif de sobriété environnementale, les articles sont limités à ceux du jour et de la veille.
+
+## Prototype de la page d'accueil
+
+Nous avons développé la page des titres (cf. Fig. 2) pour qu'elle affiche l'échantillon de données sous une forme proche de ce que prévoyait la maquette.
+
+![Prototype de la page d'accueil](./frontend/headlines_screenshot.png)
+__Fig.2__: Prototype de la page d'accueil.
+
+Pour l'instant, nous avons choisi un *framework* de mise en page minimaliste ([*PicoCSS*](https://picocss.com)).
+Dans la suite du projet, nous verrons si l'impact environnemental du passage à un *framework* de mise en page plus puissant (comme [*Bootstrap*](https://getbootstrap.com)) est acceptable.
+
+De même, nous avons décidé, contrairement à l'ensemble des services concurrents, de ne pas inclure de photographies dans cette page.
+Même si ces photographies ont probablement un impact sur l'attention portée à un article, elles ne sont pas strictement requises pour la consultation des titres et ne sont donc pas incluses dans le produit minimum viable.
+Si une telle fonctionnalité devait par la suite être introduite, il faudrait mettre en balance son utilité et son impact *a priori* important.
+En effet, à moins de mettre en place des techniques avancées d'optimisation (et possiblement ambivalentes) comme les [*sprites* en CSS](https://fr.wikipedia.org/wiki/Sprite_(jeu_vidéo)#Sprite_CSS) ou le multiplexage dans [HTTP/2](https://en.wikipedia.org/wiki/HTTP/2) (cf. Wikipédia), une requête supplémentaire est nécessaire pour chaque image.
+
+Dans l'état actuel du prototype, il est possible d'avoir une première idée de l'impact environnemental du *frontend*.
+Bien entendu, il manque encore le chargement dynamique des données, mais nous pouvons déjà évaluer l'impact de l'affichage des données et du *framework* (au sens large : *React*, *PicoCSS*, *DayJS*).
+Cette évaluation de l'impact (cf. Tab.1) est déjà encourageante en mode "développement" mais encore plus en mode "pré-production".
+Nous mesurons ici l'effet positif de l'adoption d'outils de développement Web intégrant la ["minification"](https://fr.wikipedia.org/wiki/Minification) (cf. *Wikipédia*) du code et la concaténation du code d'une part et des feuilles de style d'autre part.
+
+
+   | Nombre de requêtes | Taille de la page (ko) | Taille du DOM | EcoIndex | GES (gCO2e)
+---|--------------------|------------------------|---------------|-----------|------------
+Mode "développement"  | 21 | 1494 | 144 | 80 A🟢 |  2,1
+Mode "pré-production" | 4| 94 | 141 | 90 A🟢 |  1,8
+__Tab.1__: Évaluation de l'impact du prototype de la page d'accueil.
+
+Comme nous l'avons vu précédemment, pour la même action, l'évaluation des émissions s'échelonnaient entre 4,5 gC02e (pour Reporterre) et 5,9 gCO2e (pour Le Monde).
+Si nous arrivons à maintenir les émissions en dessous de 2 g pour notre produit minium viable, nous pouvons donc espérer proposer une alternative 2 à 3 fois moins impactante que les services existants.
+
+
