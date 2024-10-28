@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import 'dayjs/locale/fr'
@@ -30,7 +31,9 @@ function Headline({heading, issued, section}) {
         <span className="tag"> {section} </span>
         <time> {dayjs(issued).fromNow()} </time>
       </header>
-      <h2>{heading}</h2>
+      <Link to={issued}>
+        <h2>{heading}</h2>
+      </Link>
     </article>
   )
 }

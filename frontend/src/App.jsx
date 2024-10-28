@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import Headlines from './Headlines'
+import Article from './Article'
 import './App.css'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       </header>
       <Routes>
         <Route path="/" element={<Headlines/>} />
+        <Route path="/:id" element={<Article/>} />
       </Routes>
     </BrowserRouter>
   )
