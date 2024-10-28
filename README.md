@@ -88,12 +88,21 @@ Pour des raisons de respect des droits d'auteurs, nous utilisons des données g�
 Bien que fictives, ces données correspondent à la structure des services concurrents : 20 à 30 articles comportant un titre possiblement long, un auteur et une rubrique (voir [modèle de données](./frontend/sample_data.hbs)). 
 Dans un objectif de sobriété environnementale, les articles sont limités à ceux du jour et de la veille.
 
-## Prototype de la page d'accueil
+## Prototype n°1 : Fonctionnalités pour le scénario prioritaire avec données statiques
+
+Pour cette première version du prototype :
+
+- l'échantillon de données est encore chargé dans le code de manière statique,
+- les fonctionnalités implémentées ne sont que celles nécessaires pour suivre le scénario prioritaire ("Lire des articles parmi les articles du jour").
+
+Ce scénario nécessite de pouvoir naviguer entre deux types de page : la page des titres et les pages des articles.
+
+### Page des titres
 
 Nous avons développé la page des titres (cf. Fig. 2) pour qu'elle affiche l'échantillon de données sous une forme proche de ce que prévoyait la maquette.
 
-![Prototype de la page d'accueil](./frontend/headlines_screenshot.png)
-__Fig.2__: Prototype de la page d'accueil.
+![Prototype de la page des titres](./frontend/headlines_screenshot.png)
+__Fig.2__: Prototype de la page des titres.
 
 Pour l'instant, nous avons choisi un *framework* de mise en page minimaliste ([*PicoCSS*](https://picocss.com)).
 Dans la suite du projet, nous verrons si l'impact environnemental du passage à un *framework* de mise en page plus puissant (comme [*Bootstrap*](https://getbootstrap.com)) est acceptable.
@@ -108,14 +117,33 @@ Bien entendu, il manque encore le chargement dynamique des données, mais nous p
 Cette évaluation de l'impact (cf. Tab.1) est déjà encourageante en mode "développement" mais encore plus en mode "pré-production".
 Nous mesurons ici l'effet positif de l'adoption d'outils de développement Web intégrant la ["minification"](https://fr.wikipedia.org/wiki/Minification) (cf. *Wikipédia*) du code et la concaténation du code d'une part et des feuilles de style d'autre part.
 
-
-   | Nombre de requêtes | Taille de la page (ko) | Taille du DOM | EcoIndex | GES (gCO2e)
----|--------------------|------------------------|---------------|-----------|------------
-Mode "développement"  | 21 | 1494 | 144 | 80 A🟢 |  2,1
-Mode "pré-production" | 4| 94 | 141 | 90 A🟢 |  1,8
+   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
+---|--------:|------------:|--------------:|---------:|---------------------:
+Mode "développement"  | 80 A🟢 |  1,4 | 144 | 21 | 1494
+Mode "pré-production" | 90 A🟢 | 1,2 | 141 | 4 | 94
 __Tab.1__: Évaluation de l'impact du prototype de la page d'accueil.
 
-Comme nous l'avons vu précédemment, pour la même action, l'évaluation des émissions s'échelonnaient entre 4,5 gC02e (pour Reporterre) et 5,9 gCO2e (pour Le Monde).
-Si nous arrivons à maintenir les émissions en dessous de 2 g pour notre produit minium viable, nous pouvons donc espérer proposer une alternative 2 à 3 fois moins impactante que les services existants.
+### Pages des articles
 
+Les pages des articles ont pour HTTP-URI `/{id}`.
+Comme l'échantillon de données ne comportait pas d'identifiants pour les articles, nous avons adopté pour l'instant leur horodatage en tant qu'identifiant.
 
+De même que précédemment, nous avons tenté d'implémenter cette page (cf. Fig. 3) conformément à ce que prévoyait la maquette.
+Notons que nous n'avons pas inclu le choix des rubriques puisque cette fonctionnalité n'est pas incluse dans le scénario prioritaire.
+
+![Prototype de la page d'un article](./frontend/article_screenshot.png)
+__Fig.3__: Prototype de la page d'un article.
+
+Avec l'ajout de ce modèle de page et la mise en place de la navigation entre les deux modèles, il devient possible d'exécuter le scénario prioritaire complet et de mesurer son impact.
+
+   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
+---|--------:|------------:|--------------:|---------:|---------------------:
+1. Consulter les titres 					| 89 A🟢 | 1,2 | 166 | 4 | 102
+2. Choisir et lire un article 			| 95 A🟢 | 1,1 |  31 | 4 | 102
+3. Revenir aux titres et les consulter	| 89 A🟢 | 1,2 | 166 | 4 | 102
+4. Choisir et lire un autre article 		| 95 A🟢 |  1,1|  29 | 4 | 102
+__Tab.2__: Évaluation de l'impact du scénario "Lire des articles parmi les articles du jour" dans le prototype n°1.
+
+Ces estimations bien qu'artificiellement basses (puisque les données sont chargées de manière statique) sont tout de même à comparer avec [celles des services concurrents](https://htmlpreview.github.io/?https://raw.githubusercontent.com/UTT-GL03/QVOTIDIE/main/benchmark/benchmark.html) vues précédemment.
+
+Si nous arrivons à maintenir les émissions en dessous de 1,5 g pour notre produit minimum viable, nous pouvons donc espérer proposer une alternative 2 à 3 fois moins impactante que les services existants.
