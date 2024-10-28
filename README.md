@@ -117,10 +117,11 @@ Bien entendu, il manque encore le chargement dynamique des données, mais nous p
 Cette évaluation de l'impact (cf. Tab.1) est déjà encourageante en mode "développement" mais encore plus en mode "pré-production".
 Nous mesurons ici l'effet positif de l'adoption d'outils de développement Web intégrant la ["minification"](https://fr.wikipedia.org/wiki/Minification) (cf. *Wikipédia*) du code et la concaténation du code d'une part et des feuilles de style d'autre part.
 
-   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
----|--------:|------------:|--------------:|---------:|---------------------:
-Mode "développement"  | 80 A🟢 |  1,4 | 144 | 21 | 1494
-Mode "pré-production" | 90 A🟢 | 1,2 | 141 | 4 | 94
+|   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
+|---|--------:|------------:|--------------:|---------:|---------------------:
+| Mode "développement"  | 80 A🟢 |  1,4 | 144 | 21 | 1494
+| Mode "pré-production" | 90 A🟢 | 1,2 | 141 | 4 | 94
+
 __Tab.1__: Évaluation de l'impact du prototype de la page d'accueil.
 
 ### Pages des articles
@@ -136,12 +137,13 @@ __Fig.3__: Prototype de la page d'un article.
 
 Avec l'ajout de ce modèle de page et la mise en place de la navigation entre les deux modèles, il devient possible d'exécuter le scénario prioritaire complet et de mesurer son impact.
 
-   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
----|--------:|------------:|--------------:|---------:|---------------------:
-1. Consulter les titres 					| 89 A🟢 | 1,2 | 166 | 4 | 102
-2. Choisir et lire un article 			| 95 A🟢 | 1,1 |  31 | 4 | 102
-3. Revenir aux titres et les consulter	| 89 A🟢 | 1,2 | 166 | 4 | 102
-4. Choisir et lire un autre article 		| 95 A🟢 |  1,1|  29 | 4 | 102
+|   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
+|---|--------:|------------:|--------------:|---------:|---------------------:
+| 1. Consulter les titres 					   | 89 A🟢 | 1,2 | 166 | 4 | 102
+| 2. Choisir et lire un article 			   | 95 A🟢 | 1,1 |  31 | 4 | 102
+| 3. Revenir aux titres et les consulter	| 89 A🟢 | 1,2 | 166 | 4 | 102
+| 4. Choisir et lire un autre article 		| 95 A🟢 |  1,1|  29 | 4 | 102
+
 __Tab.2__: Évaluation de l'impact du scénario "Lire des articles parmi les articles du jour" dans le prototype n°1.
 
 Ces estimations bien qu'artificiellement basses (puisque les données sont chargées de manière statique) sont tout de même à comparer avec [celles des services concurrents](https://htmlpreview.github.io/?https://raw.githubusercontent.com/UTT-GL03/QVOTIDIE/main/benchmark/benchmark.html) vues précédemment.
