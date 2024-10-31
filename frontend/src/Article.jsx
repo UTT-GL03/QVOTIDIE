@@ -1,16 +1,26 @@
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 import dayjs from 'dayjs'
 import localizedFormat from 'dayjs/plugin/localizedFormat'
 import 'dayjs/locale/fr'
-import data from './assets/sample_data.json'
 
 dayjs.extend(localizedFormat)
 dayjs.locale('fr')
 
 function Article() {
   const {id} = useParams()
-  const {heading, creator, issued, content} =
-    data.articles.find(x => id === x.issued)
+  const [article, setArticle] = useState({});
+
+  useEffect(() => {
+    fetch('/sample_data.json')
+      .then(x => x.json())
+      .then(data => {
+        setArticle(data.articles.find(x => id === x.issued))
+      })
+
+  }, [id])
+
+  const {heading, creator, issued, content=''} = article;
   return (
     <main className="container">
       <article>
