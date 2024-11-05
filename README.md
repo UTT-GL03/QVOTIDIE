@@ -88,7 +88,7 @@ Pour des raisons de respect des droits d'auteurs, nous utilisons des données g�
 Bien que fictives, ces données correspondent à la structure des services concurrents : 20 à 30 articles comportant un titre possiblement long, un auteur et une rubrique (voir [modèle de données](./frontend/sample_data.hbs)). 
 Dans un objectif de sobriété environnementale, les articles sont limités à ceux du jour et de la veille.
 
-## Prototype n°1 : Fonctionnalités pour le scénario prioritaire avec données statiques
+## Prototype n°1 : Fonctionnalités pour le scénario prioritaire avec données chargées de manière statique
 
 Pour cette première version du prototype :
 
@@ -149,3 +149,12 @@ __Tab.2__: Évaluation de l'impact du scénario "Lire des articles parmi les art
 Ces estimations bien qu'artificiellement basses (puisque les données sont chargées de manière statique) sont tout de même à comparer avec [celles des services concurrents](https://htmlpreview.github.io/?https://raw.githubusercontent.com/UTT-GL03/QVOTIDIE/main/benchmark/benchmark.html) vues précédemment.
 
 Si nous arrivons à maintenir les émissions en dessous de 1,5 g pour notre produit minimum viable, nous pouvons donc espérer proposer une alternative 2 à 3 fois moins impactante que les services existants.
+
+## Prototype n°2 : Fonctionnalités pour le scénario prioritaire avec données statiques chargées de manière dynamique
+
+Pour cette deuxième version du prototype, les données (toujours statiques) sont désormais chargées par le *frontend* à travers le réseau immédiatement après un premier affichage à vide.
+Ce comportement, plus réaliste, n'a pour effet qu'une requête supplémentaire par page affichée. 
+
+Concernant l'évaluation de l'impact environemental du scénario, par rapport au tableau précédent (cf. Tab.2), à l'exception du nombre de requêtes qui est incrémenté de 1, les résultats sont strictement identiques.
+
+
