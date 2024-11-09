@@ -167,10 +167,18 @@ Nous utiliserons désormais un autre logiciel, *GreenFrame*, qui évalue non pas
 | La Croix     | 139     | 120
 | Le Monde     | 133     | [60, 307]
 | Reporterre   | 84      | 66
+| __QVOTIDIE__ | __32__  | __33__
 
-__Tab.3__ : Impact en mg CO2e de la consultation proprement dite des pages des services concurrents.
+__Tab.3__ : Impact en mg CO2e de la consultation proprement dite des pages des services existants et de notre prototype.
 
 Pour les services existants, sur le graphique présentant l'utilisation dans le temps des ressources (cf. Fig.4), on constate d'autres pics que le pic initial, probablement associés au chargement et à l'affichage de contenus multimédias et de publicités, ou causés par des techniques de pistage sur le Web.
 
 ![Impact du journal Le Monde](./benchmark/LeMonde_homepage.png)
 __Fig.4__: Consommation de ressources lors de la consultation de la page des titres du journal *Le Monde*.
+
+Pour notre prototype, au contraire, le graphique (cf. Fig.5) présente un unique pic significatif de consommation de CPU et de réseau.
+Notons par ailleurs que le pic de CPU est 25 fois plus faible que celui de la figure précédente.
+Par ailleurs, nous remarquons que cette consommation ne compte que pour 7% de la consommation totale, le reste étant consommé par l'écran durant la durée de la mesure.
+
+![Impact du prototype](./benchmark/Qvotidie_homepage.png)
+__Fig.5__ : Consommation de ressources lors de la consultation de la page des titres dans notre prototype.
