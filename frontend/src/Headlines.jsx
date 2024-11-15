@@ -11,12 +11,12 @@ function Headlines() {
   const [articlesByRow, setArticlesByRow] = useState([])
 
   useEffect(() => {
-    fetch('/sample_data.json')
+    fetch('http://localhost:5984/qvotidie/_all_docs?include_docs=true')
       .then(x => x.json())
       .then(data => {
         setArticlesByRow(
           Object.values(
-            Object.groupBy(data.docs, (x, i) => Math.floor(i/3))
+            Object.groupBy(data.rows, (x, i) => Math.floor(i/3))
           )
         )
       })
@@ -26,8 +26,8 @@ function Headlines() {
     <main className="container">
       {articlesByRow.map((x, i) =>
         <div key={i} className="grid">
-          {x.map((y, j) =>
-            <Headline {...y} key={j} />
+          {x.map(({doc}, j) =>
+            <Headline {...doc} key={j} />
           )}
         </div>
       )}
