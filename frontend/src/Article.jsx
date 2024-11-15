@@ -12,10 +12,10 @@ function Article() {
   const [article, setArticle] = useState({})
 
   useEffect(() => {
-    fetch('/sample_data.json')
+    fetch(`http://localhost:5984/qvotidie/${id}`)
       .then(x => x.json())
       .then(data => {
-        setArticle(data.docs.find(x => id === x._id))
+        setArticle(data)
       })
 
   }, [id])
