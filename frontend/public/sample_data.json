@@ -1,6 +1,7 @@
 {
-  "articles": [
+  "docs": [
     {
+      "_id": "article1",
       "section": "Culture",
       "issued": "2024-10-07 06:35",
       "creator": "Darrell Whitson",
