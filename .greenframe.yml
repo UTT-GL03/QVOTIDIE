@@ -7,3 +7,5 @@ scenarios:
     path: ./scenarios/consult_article.js
 containers:
   - qvotidie-static_hosting-1
+  - qvotidie-backend-1
+
