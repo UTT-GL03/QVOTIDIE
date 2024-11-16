@@ -7,4 +7,5 @@ scenarios:
       name: Consulter un article
 containers:
   - qvotidie-static_hosting-1
+  - qvotidie-backend-1
 
