@@ -243,3 +243,16 @@ Dans un cas comme dans l'autre, ce filtre nécessite d'indexer préalablement le
 
 Notons que nous choisirons la seconde stratégie qui permet d'éviter plus facilement au lecteur une disparité d'expérience suivant le moment de la journée où il consulterait la page des titres.
 
+### Évolution de l'impact environnemental après correction
+
+La stratégie choisie a eu l'effet escompté : les mesures d'impact (cf. Fig. 10) montrent que son implémentation a permis de contrecarrer l'augmentation de l'impact environnemental causée par le passage de 30 à 3000 articles.
+
+![](./benchmark/Qvotidie_footprint_timeline.png)
+__Fig.10__ : Évolution de l'impact de l'application avec l'augmentation de la quantité de données puis sa prise en compte.
+
+Plus qu'un simple retour à l'impact d'avant l'augmentation de la quantité des données traitées, on peut même percevoir une légère amélioration, notamment sur le réseau entre le *backend* et le *frontend* (cf. Fig. 11).
+Cette amélioration s'explique par le fait que la technique utilisée pour filtrer les articles a également permis de choisir les attributs réellement nécessaires (et donc de ne plus transférer le contenu des articles pour cette page des titres).
+
+![](./benchmark/Qvotidie_homepage_v4.png)
+__Fig.11__ : Comparaison de l'impact de la page des titres optimisée avec 3000 articles et non-optimisée avec 30 articles.
+
