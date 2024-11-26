@@ -282,7 +282,7 @@ De fait, les trois éléments ayant le plus d'impact (à peu près à égalité,
 - le réseau du client,
 - le réseau du serveur.
 
-### Impact de l'introduction d'une base de données
+### Effet de l'introduction d'une base de données
 
 Afin de réduire l'impact énérgétique du réseau, nous stockons désormais les données de l'application (`v2.0.0`) dans une base de données (*CouchDB*).
 Cette évolution nous permet, lors de l'affichage d'un article, de charger un seul article plutôt que 3000.
@@ -320,3 +320,17 @@ Pour la consultation d'un article, cette forte diminution de l'utilisation des r
 
 Concernant la consultation des titres (cf. Tab.9a), par contre, l'ajout de la base de données a eu pour seul effet notable de remplacer la consommation du réseau du serveur Web par celle du réseau de la base de données.
 Pour réduire cette consommation, nous devons maintenant réduire drastiquement la quantité de données chargées par la page des titres du journal.
+
+### Stratégie de limitation du nombre d'éléments affichés
+
+Dans sa version sur papier, la page des titres d'un journal ne donne accès qu'aux articles du jour (ceux terminés lors du "bouclage").
+Cependant, cette stratégie ne peut pas être transposée directement au numérique puisque sur les applications de presse, les articles sont d'ordinaire rendus publics au fur et à mesure qu'ils sont terminés.
+Dès lors, deux stratégies équivalentes peuvent être envisagées pour donner accès sur la page des titres à un choix d'article équivalent mais en flux continu :
+
+- donner accès aux articles parus dans le numéro papier du jour (écrits donc la veille ou dans la nuit) et ceux déjà écrits, à paraître dans le numéro du lendemain,
+- donner accès aux `n` derniers articles écrits (où `n` serait le nombre habituel d'articles dans un numéro, par exemple 24).
+
+Dans un cas comme dans l'autre, ce filtre nécessite d'indexer préalablement les articles en fonction de leur date et heure de publication en ligne.
+
+Notons que nous choisirons la seconde stratégie qui permet d'éviter plus facilement au lecteur une disparité d'expérience suivant le moment de la journée où il consulterait la page des titres.
+
