@@ -230,3 +230,16 @@ __Fig.9__ : Évolution de l'impact de la consultation de la page des titres en p
 
 L'évolution ne concerne bien sûr que la page des titres, puisque c'est la seule qui charge l'ensemble des articles.
 
+### Prise en compte du passage à l'échelle
+
+Dans sa version sur papier, la page des titres d'un journal ne donne accès qu'aux articles du jour (ceux terminés lors du "bouclage").
+Cependant, cette stratégie ne peut pas être transposée directement au numértique puisque sur les applications de presse, les articles sont d'ordinaire rendus publics au fur et à mesure qu'ils sont terminés.
+Dès lors, deux stratégies équivalentes peuvent être envisagées pour donner accès sur la page des titres à un choix d'article équivalent mais en flux continu :
+
+- donner accès aux articles parus dans le numéro papier du jour (écrits donc la veille ou dans la nuit) et ceux déjà écrits, à paraître dans le numéro du lendemain,
+- donner accès aux `n` derniers articles écrits (où `n` serait le nombre habituel d'articles dans un numéro, par exemple 25).
+
+Dans un cas comme dans l'autre, ce filtre nécessite d'indexer préalablement les articles en fonction de leur date et heure de publication en ligne.
+
+Notons que nous choisirons la seconde stratégie qui permet d'éviter plus facilement au lecteur une disparité d'expérience suivant le moment de la journée où il consulterait la page des titres.
+
