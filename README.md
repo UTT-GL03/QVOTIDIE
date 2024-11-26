@@ -256,3 +256,14 @@ Cette amélioration s'explique par le fait que la technique utilisée pour filtr
 ![](./benchmark/Qvotidie_homepage_v4.png)
 __Fig.11__ : Comparaison de l'impact de la page des titres optimisée avec 3000 articles et non-optimisée avec 30 articles.
 
+### Perspectives
+
+La limite de 25 articles accessibles à partir de la page des titres supprime pour l'instant l'intérêt de l'archivage des articles.
+Plusieurs possibilités pourront être envisagées (séparément ou de manière combinée) dans la suite du projet pour donner accès à ces articles archivés :
+
+- la consultation d'une pages des titres par thème,
+- l'accès possible sur demande à d'autres pages de résultats,
+- la recherche par le contenu (comme dans un moteur de recherche),
+- la consultation d'un article apparenté à l'article consulté (lié de manière explicite, partageant des mots-clefs, utilisant les mêmes termes, etc.).
+
+Comme précédemment, un arbitrage sera réalisé pour chacune de ces fonctionnalités pour tenir compte à la fois de leur utilité sociale et de leur impact environnemental.
