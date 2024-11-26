@@ -220,3 +220,13 @@ Par conséquent nous adopterons également ce choix de conception.
 
 L'augmentation du volume d'articles est linéaire : à raison de 25 nouveaux articles par jour, la base de données sera de 3000 articles au bout de 4 mois (et ainsi de suite).
 
+### Évolution de l'impact environnemental avant correction
+
+La figure 9 illustre l'impact du passage à l'échelle de 30 à 3000 articles de presse (correspondant à 4 mois de publication du quotidien).
+On observe, sur le *backend*, une multiplication par 3,5 de l'impact du processeur, et surtout, concernant l'impact du réseau, une multiplication par 31 pour le *frontend* et une explosion non quantifiable (de 0 à 64 mWh) pour le *backend*.
+
+![](./benchmark/Qvotidie_homepage_v4a.png)
+__Fig.9__ : Évolution de l'impact de la consultation de la page des titres en passant de 30 articles à 3000 (soit 4 mois d'historique).
+
+L'évolution ne concerne bien sûr que la page des titres, puisque c'est la seule qui charge l'ensemble des articles.
+
