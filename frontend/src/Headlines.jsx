@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router'
+import { Link, useParams } from 'react-router'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import 'dayjs/locale/fr'
@@ -11,30 +11,43 @@ function Headlines() {
   const [articlesByRow, setArticlesByRow] = useState([])
   const [nextBookmark, setNextBookmark] = useState()
   const [requestedBookmark, setRequestedBookmark] = useState()
+  const { section } = useParams()
 
-  useEffect(() => {
+  const fetchArticles = (previousArticles) => {
+    const resetBookmark = previousArticles.length === 0
     fetch('http://localhost:5984/qvotidie/_find', {
         method: 'POST',
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          selector: { issued: { "$gt": null } },
+          selector: {
+            ...(section && {section}),
+            issued: { "$gt": null }
+          },
           sort: [{ issued: "desc" }],
           fields: [ "_id", "section", "issued", "heading" ],
-          bookmark: requestedBookmark,
+          bookmark: resetBookmark ? null : requestedBookmark,
           limit: 24
         })
     })
       .then(x => x.json())
       .then(data => {
         setArticlesByRow([
-          ...articlesByRow,
+          ...previousArticles,
           ...Object.values(
             Object.groupBy(data.docs, (x, i) => Math.floor(i/3))
           )
         ])
         setNextBookmark(data.bookmark)
       })
+  }
+
+  useEffect(() => {
+    fetchArticles(articlesByRow)
   }, [requestedBookmark])
+
+  useEffect(() => {
+    fetchArticles([])
+  }, [section])
 
   return (
     <main className="container">
