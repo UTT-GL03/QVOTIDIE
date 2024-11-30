@@ -1,7 +1,10 @@
-.tag {
+.tag, .active {
   background-color: #ddd;
-  padding: 10px 20px;
   border-radius: 16px;
+}
+
+.tag {
+  padding: 10px 20px;
   font-size: smaller;
 }
 

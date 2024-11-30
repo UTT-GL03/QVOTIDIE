@@ -1,0 +1,10 @@
+{
+  "index": {
+    "fields": [
+      {"section": "desc"},
+      {"issued": "desc"}
+    ]
+  },
+  "name": "by_section_and_date",
+  "type": "json"
+}
