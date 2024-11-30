@@ -9,6 +9,8 @@ dayjs.locale('fr')
 
 function Headlines() {
   const [articlesByRow, setArticlesByRow] = useState([])
+  const [nextBookmark, setNextBookmark] = useState()
+  const [requestedBookmark, setRequestedBookmark] = useState()
 
   useEffect(() => {
     fetch('http://localhost:5984/qvotidie/_find', {
@@ -18,18 +20,21 @@ function Headlines() {
           selector: { issued: { "$gt": null } },
           sort: [{ issued: "desc" }],
           fields: [ "_id", "section", "issued", "heading" ],
+          bookmark: requestedBookmark,
           limit: 24
         })
     })
       .then(x => x.json())
       .then(data => {
-        setArticlesByRow(
-          Object.values(
+        setArticlesByRow([
+          ...articlesByRow,
+          ...Object.values(
             Object.groupBy(data.docs, (x, i) => Math.floor(i/3))
           )
-        )
+        ])
+        setNextBookmark(data.bookmark)
       })
-  }, [])
+  }, [requestedBookmark])
 
   return (
     <main className="container">
@@ -40,6 +45,9 @@ function Headlines() {
           )}
         </div>
       )}
+      <button type="submit" onClick={ () => setRequestedBookmark(nextBookmark) }>
+        Suivant
+      </button>
     </main>
   )
 }
