@@ -10,6 +10,8 @@ const tomorrow = dayjs().add(1, 'day').format('YYYY-MM-DD')
 
 function Headlines() {
   const [articlesByRow, setArticlesByRow] = useState([])
+  const [nextBookmark, setNextBookmark] = useState()
+  const [requestedBookmark, setRequestedBookmark] = useState()
 
   useEffect(() => {
     fetch('http://localhost:5984/qvotidie/_find', {
@@ -19,18 +21,21 @@ function Headlines() {
           selector: { issued: { "$lt": tomorrow } },
           sort: [{ issued: "desc" }],
           fields: [ "_id", "section", "issued", "heading" ],
-          limit: 25
+          limit: 24,
+          bookmark: requestedBookmark
         })
     })
       .then(x => x.json())
       .then(data => {
-        setArticlesByRow(
-          Object.values(
+        setArticlesByRow([
+          ...articlesByRow,
+          ...Object.values(
             Object.groupBy(data.docs, (x, i) => Math.floor(i/3))
           )
-        )
+        ])
+        setNextBookmark(data.bookmark)
       })
-  }, [])
+  }, [requestedBookmark])
 
   return (
     <main className="container">
@@ -41,6 +46,9 @@ function Headlines() {
           )}
         </div>
       )}
+      <button type="submit" onClick={ () => setRequestedBookmark(nextBookmark) }>
+        Suivant
+      </button>
     </main>
   )
 }
