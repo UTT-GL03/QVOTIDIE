@@ -1,0 +1,46 @@
+{
+  "extra-header": {},
+  "output": [
+    "json",
+    "statement"
+  ],
+  "user-agent": "insights",
+  "output-name": "ecoindex",
+  "courses": [
+    {
+      "name": "Pages principales",
+      "target": "",
+      "course": "À la une ; Article",
+      "is-best-pages": true,
+      "urls": [
+        "https://reporterre.net",
+        "https://reporterre.net/L-hexane-un-derive-toxique-du-petrole-omnipresent-dans-notre-alimentation"
+      ]
+    },
+    {
+      "name": "Lire des articles parmi les articles du jour",
+      "target": "",
+      "course": "",
+      "is-best-pages": false,
+      "urls": [
+        "https://reporterre.net",
+        "https://reporterre.net/L-hexane-un-derive-toxique-du-petrole-omnipresent-dans-notre-alimentation",
+        "https://reporterre.net/?",
+        "https://reporterre.net/Potager-et-tricot-un-village-fait-cohabiter-enfants-places-et-personnes-agees"
+      ]
+    },
+    {
+      "name": "Lire des articles d'une rubrique donnée",
+      "target": "",
+      "course": "",
+      "is-best-pages": false,
+      "urls": [
+        "https://reporterre.net",
+        "https://reporterre.net/Climat-18",
+        "https://reporterre.net/Retour-des-marches-climat-C-est-un-refus-de-la-resignation",
+        "https://reporterre.net/Climat-18?",
+        "https://reporterre.net/L-antiracisme-au-coeur-des-nouvelles-marches-pour-le-climat"
+      ]
+    }
+  ]
+}
