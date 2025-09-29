@@ -1,0 +1,47 @@
+{
+  "extra-header": {},
+  "output": [
+    "json",
+    "statement"
+  ],
+  "user-agent": "insights",
+  "output-name": "ecoindex",
+  "courses": [
+    {
+      "name": "Pages les plus consultées",
+      "target": "",
+      "course": "À la une ; Article avec vidéo ; Article sans vidéo",
+      "is-best-pages": true,
+      "urls": [
+        "https://www.lefigaro.fr/",
+        "https://www.lefigaro.fr/sciences/l-ue-juge-l-objectif-climatique-de-la-chine-clairement-decevant-20250925",
+        "https://www.lefigaro.fr/sciences/les-bacteries-cauchemardesques-resistantes-aux-antibiotiques-en-forte-hausse-aux-etats-unis-20250923"
+      ]
+    },
+    {
+      "name": "Lire des articles parmi les articles du jour",
+      "target": "",
+      "course": "",
+      "is-best-pages": false,
+      "urls": [
+        "https://www.lefigaro.fr/",
+        "https://www.lefigaro.fr/entrepreneur/il-vaut-mieux-quitter-la-france-le-cofondateur-de-ledger-critique-l-etat-obese-qui-vit-au-dessus-de-ses-moyens-20250928",
+        "https://www.lefigaro.fr/?bis",
+        "https://www.lefigaro.fr/sports/cyclisme/mondiaux-de-cyclisme-intouchable-tadej-pogacar-ecrase-la-concurrence-et-s-offre-un-nouveau-sacre-20250928"
+      ]
+    },
+    {
+      "name": "Lire des articles d'une rubrique donnée",
+      "target": "",
+      "course": "",
+      "is-best-pages": false,
+      "urls": [
+        "https://www.lefigaro.fr/",
+        "https://www.lefigaro.fr/sciences",
+        "https://www.lefigaro.fr/sciences/l-ue-juge-l-objectif-climatique-de-la-chine-clairement-decevant-20250925",
+        "https://www.lefigaro.fr/sciences?bis",
+        "https://www.lefigaro.fr/sciences/les-bacteries-cauchemardesques-resistantes-aux-antibiotiques-en-forte-hausse-aux-etats-unis-20250923"
+      ]
+    }
+  ]
+}
