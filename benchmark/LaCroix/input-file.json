@@ -1,0 +1,48 @@
+{
+  "extra-header": {
+    "Cookie": "euconsent-v2=CQYgfgAQYgfgAAHABBENB9FsAP_gAAAAAAAALoNR_G__bXlr-b736ftkeYxf9_hr7sQxBgbJk24FzLvW_JwX32E7NAzatqYKmRIAu3TBIQNlHJDURVCgKIgVrzDMaEyUoTtKJ6BkiFMRY2NYCFxvm4pjeQCY5vr99ld9mR-N7dr82dzyy6hnv3a9_-S1WJCdIYetDfn8ZBKT-9IE9_x8v4v4_N7pE2-eS1n_tGvp6D9-Yvv_dBnx9_baffzPn__rl_e7X__f_n37v943X77_____f_-7__wXAgTAA4AGaAZ8A6QCVQFsgL9AZCA0YBz4DtgHngPtAfsBBECCgEaQJEASSAkoBKMCYYE5YJ-gn9BQQFBQKLAUcAo-BVMCrIFYAKyAVtAr6BYQC1YFvALgADEoAMAAQXQKQAYAAgugOgAwABBdAhABgACC6ASADAAEF0C0AGAAILoA.f_wAAAAAAAAA"
+  },
+  "output": [
+    "json",
+    "statement"
+  ],
+  "user-agent": "insights",
+  "output-name": "ecoindex",
+  "courses": [
+    {
+      "name": "Pages principales",
+      "target": "",
+      "course": "À la une ; Article",
+      "is-best-pages": true,
+      "urls": [
+        "https://www.la-croix.com",
+        "https://www.la-croix.com/a-vif/eva-joly-sur-la-condamnation-de-sarkozy-ne-cherchons-pas-a-sauver-l-illusion-francaise-de-linfaillibilite-du-pouvoir-20250929"
+      ]
+    },
+    {
+      "name": "Lire des articles parmi les articles du jour",
+      "target": "",
+      "course": "",
+      "is-best-pages": false,
+      "urls": [
+        "https://www.la-croix.com",
+        "https://www.la-croix.com/a-vif/eva-joly-sur-la-condamnation-de-sarkozy-ne-cherchons-pas-a-sauver-l-illusion-francaise-de-linfaillibilite-du-pouvoir-20250929",
+        "https://www.la-croix.com/?",
+        "https://www.la-croix.com/societe/places-de-permis-manque-d-inspecteurs-pourquoi-les-autos-ecoles-se-mobilisent-ce-lundi-20250929"
+      ]
+    },
+    {
+      "name": "Lire des articles d'une rubrique donnée",
+      "target": "",
+      "course": "",
+      "is-best-pages": false,
+      "urls": [
+        "https://www.la-croix.com",
+        "https://www.la-croix.com/Ethique/Environnement/Climat",
+        "https://www.la-croix.com/a-vif/nous-alertons-sur-l-atteinte-a-lintegrite-de-lunion-europeenne-en-matiere-de-droits-humains-20250926",
+        "https://www.la-croix.com/Ethique/Environnement/Climat?",
+        "https://www.la-croix.com/planete/acidification-des-oceans-la-septieme-limite-planetaire-est-franchie-20250924"
+      ]
+    }
+  ]
+}
