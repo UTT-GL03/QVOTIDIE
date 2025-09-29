@@ -1,0 +1,47 @@
+{
+  "extra-header": {},
+  "output": [
+    "json",
+    "statement"
+  ],
+  "user-agent": "insights",
+  "output-name": "ecoindex",
+  "courses": [
+    {
+      "name": "Pages principales",
+      "target": "",
+      "course": "À la une ; Article ; Live",
+      "is-best-pages": true,
+      "urls": [
+        "https://www.lemonde.fr",
+        "https://www.lemonde.fr/international/article/2025/09/29/en-moldavie-le-parti-pro-europeen-de-la-presidente-maia-sandu-en-tete-des-legislatives_6643318_3210.html",
+        "https://www.lemonde.fr/international/live/2025/09/29/en-direct-guerre-en-ukraine-l-attaque-massive-russe-du-week-end-a-touche-des-infrastructures-energetiques-et-des-zones-civiles-selon-volodymyr-zelensky_6643222_3210.html"
+      ]
+    },
+    {
+      "name": "Lire des articles parmi les articles du jour",
+      "target": "",
+      "course": "",
+      "is-best-pages": false,
+      "urls": [
+        "https://www.lemonde.fr",
+        "https://www.lemonde.fr/international/article/2025/09/29/en-moldavie-le-parti-pro-europeen-de-la-presidente-maia-sandu-en-tete-des-legislatives_6643318_3210.html",
+        "https://www.lemonde.fr/?",
+        "https://www.lemonde.fr/international/live/2025/09/29/en-direct-guerre-en-ukraine-l-attaque-massive-russe-du-week-end-a-touche-des-infrastructures-energetiques-et-des-zones-civiles-selon-volodymyr-zelensky_6643222_3210.html"
+      ]
+    },
+    {
+      "name": "Lire des articles d'une rubrique donnée",
+      "target": "",
+      "course": "",
+      "is-best-pages": false,
+      "urls": [
+        "https://www.lemonde.fr",
+        "https://www.lemonde.fr/climat/",
+        "https://www.lemonde.fr/climat/article/2025/09/28/espagne-la-region-de-valence-en-alerte-rouge-pour-de-fortes-pluies-l-agence-meteorologique-evoque-un-danger-extraordinaire_6643306_1652612.html",
+        "https://www.lemonde.fr/climat/?",
+        "https://www.lemonde.fr/planete/article/2025/09/28/quelques-milliers-de-manifestants-en-france-pour-le-climat-mais-aussi-pour-gaza-et-la-justice-sociale_6643293_3244.html"
+      ]
+    }
+  ]
+}
