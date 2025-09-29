@@ -1,0 +1,48 @@
+{
+  "extra-header": {
+    "Cookie": "consentDate=2025-09-29T06:02:18.197Z&consentUUID=15d2453d-d923-489d-b6e4-12e812c401ba_48"
+  },
+  "output": [
+    "json",
+    "statement"
+  ],
+  "user-agent": "insights",
+  "output-name": "ecoindex",
+  "courses": [
+    {
+      "name": "Pages principales",
+      "target": "",
+      "course": "",
+      "is-best-pages": true,
+      "urls": [
+        "https://www.liberation.fr",
+        "https://www.liberation.fr/economie/la-responsabilite-dairbus-et-dair-france-de-nouveau-posee-lors-du-proces-en-appel-de-laccident-du-vol-rio-paris-20250928_JJDX2I6V3FFHDJRTVWP2A77HL4/"
+      ]
+    },
+    {
+      "name": "Lire des articles parmi les articles du jour",
+      "target": "",
+      "course": "",
+      "is-best-pages": false,
+      "urls": [
+        "https://www.liberation.fr",
+        "https://www.liberation.fr/economie/la-responsabilite-dairbus-et-dair-france-de-nouveau-posee-lors-du-proces-en-appel-de-laccident-du-vol-rio-paris-20250928_JJDX2I6V3FFHDJRTVWP2A77HL4/",
+        "https://www.liberation.fr/?",
+        "https://www.liberation.fr/politique/elu-depute-de-paris-michel-barnier-retrouve-les-bancs-de-lassemblee-20250928_VEJDHJU3UNHIJAJVPIRSYHSIBA/"
+      ]
+    },
+    {
+      "name": "Lire des articles d'une rubrique donnée",
+      "target": "",
+      "course": "",
+      "is-best-pages": false,
+      "urls": [
+        "https://www.liberation.fr",
+        "https://www.liberation.fr/environnement/",
+        "https://www.liberation.fr/environnement/animaux/au-perou-une-nouvelle-espece-de-rongeur-decouverte-au-coeur-de-la-jungle-20250928_HONL3YE7HVBE3OKPQFZUIZPFSM/",
+        "https://www.liberation.fr/environnement/?",
+        "https://www.liberation.fr/environnement/climat/inondations-letat-de-catastrophe-naturelle-reconnu-pour-une-centaine-de-communes-20250927_5L6GUAR7ZZC4NLTVODX3PDVAAE/"
+      ]
+    }
+  ]
+}
