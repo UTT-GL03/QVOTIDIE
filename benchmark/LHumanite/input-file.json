@@ -1,0 +1,49 @@
+{
+  "extra-header": {
+    "Cookie": "euconsent-v2=CQYgfgAQYgfgABcAKBFRB-FoAP_gAEPgAAqIJDwGwAKgAZAA4ACAAFQALQAagBMAC2AGEAPAAuAB6AEdAMIAZwA0ABogDaAI9AXmAxkCA4EYQIyARmAkOCQ8AsACoAHAAQAAqABqAEwAjoBogDaAI9AXmAAA.IJDwGwAKgAZAA4ACAAFQALQAagBMAC2AGEAPAAuAB6AEdAMIAZwA0ABogDaAI9AXmAxkCA4EYQIyARmAkOA.0GIaFww.4ElgBABZASWAKYBwAAQAFAAaAA6AB-AEIARAAmgBQAFMAKwAsgBcAG8AOQBAgCEAJ4AUQApgCmACACIAH0AAAAAAAA"
+  },
+  "output": [
+    "json",
+    "statement"
+  ],
+  "user-agent": "insights",
+  "output-name": "ecoindex",
+  "courses": [
+    {
+      "name": "Pages principales",
+      "target": "",
+      "course": "À la une ; Article ; Vidéo",
+      "is-best-pages": true,
+      "urls": [
+        "https://www.humanite.fr",
+        "https://www.humanite.fr/politique/aide-medicale-detat/taxe-zucman-isf-retraites-lecornu-se-replie-sur-sa-droite",
+        "https://www.humanite.fr/environnement/camille-etienne/reculs-environnementaux-comment-lutter-avec-c-etienne-c-duflot-r-vautard-et-l-pincon"
+      ]
+    },
+    {
+      "name": "Lire des articles parmi les articles du jour",
+      "target": "",
+      "course": "",
+      "is-best-pages": false,
+      "urls": [
+        "https://www.humanite.fr",
+        "https://www.humanite.fr/politique/aide-medicale-detat/taxe-zucman-isf-retraites-lecornu-se-replie-sur-sa-droite",
+        "https://www.humanite.fr/?",
+        "https://www.humanite.fr/monde/guerre-en-ukraine/ukraine-des-frappes-massives-au-lendemain-des-menaces-de-moscou-a-lonu"
+      ]
+    },
+    {
+      "name": "Lire des articles d'une rubrique donnée",
+      "target": "",
+      "course": "",
+      "is-best-pages": false,
+      "urls": [
+        "https://www.humanite.fr",
+        "https://www.humanite.fr/sections/environnement",
+        "https://www.humanite.fr/environnement/catastrophe-climatique/locean-est-en-train-de-sacidifier-le-monde-a-franchi-sa-septieme-limite-planetaire-sur-neuf",
+        "https://www.humanite.fr/sections/environnement?",
+        "https://www.humanite.fr/environnement/camille-etienne/reculs-environnementaux-comment-lutter-avec-c-etienne-c-duflot-r-vautard-et-l-pincon"
+      ]
+    }
+  ]
+}
