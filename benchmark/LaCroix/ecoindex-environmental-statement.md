@@ -3,7 +3,7 @@
 Mesure effectuée le Mon Sep 29 2025.
 
 ## Niveau d’écoconception du site web
-![Note E](https://raw.githubusercontent.com/cnumr/lighthouse-plugin-ecoindex/main/assets/Note-E.webp)
+![Note E](https://raw.githubusercontent.com/cnumr/lighthouse-plugin-ecoindex/598d9d1bf10a90448d815fd0bf50ebdc712c3b0d/assets/Note-E.webp)
 * Note Ecoindex : **27/100**
 * Consommation d'eau moyenne rapportée à 1 000 utilisateurs (en litres) : **37.10 litres, (soit 4 packs d'eau minérale).***
 * Émission de Gaz à Effet de Serre (GES) moyenne rapportée à 1 000 utilisateurs (kilos CO2e) : **2.47 kilos CO2e (soit un trajet de 11 kms en voiture à énergie thermique).***
