@@ -40,5 +40,3 @@ jobs:
           args: http://localhost/ 200 30000 500
       - name: Measure carbon footprint
         uses: marmelab/greenframe-action@1.0.0
-        env:
-          GREENFRAME_SECRET_TOKEN: ${{secrets.GREENFRAME_SECRET_TOKEN}}
