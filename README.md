@@ -105,7 +105,7 @@ Les offres de service numérique des quotidiens nationaux (cf. Tab. 2 ) se sont 
 
 Certains acteurs se distinguent en offrant en outre aux abonnées l'accès à d'autres services (événements culturels, spotify commentaires), numériques ou non, susceptibles d'augmenter, à des degrés divers, l'impact environnemental de l'offre.
 
-Le seul modèle alternatif, est celui de *Reporterre*, totalement gratuit mais basé sur des dons. Il est possible que sa fréquence de publication plus basse que celle d'un quotidien (seulement 6 articles par jours en septembre 2025), requière le travail de moins de journalistes à temps plein.
+Le seul modèle alternatif, est celui de *Reporterre*, totalement gratuit mais basé sur des dons. Il est possible que sa fréquence de publication plus basse que celle d'un quotidien (seulement 6 articles par jour en septembre 2025), requière le travail de moins de journalistes à temps plein.
 
 | Bénéfices possibles | Montant unitaire | Quantité nécessaire pour financer un salaire[^salaire]
 | --- | --: | --:
@@ -121,7 +121,7 @@ Tab. 3 : Source de revenus possibles pour le service d'un quotidien national.
 [^encart]: Basé sur le prix d'un bandeau court à la une d'un numéro de *La Croix* (source : [Bayard](https://www.bayardmediadeveloppement.com/wp-content/uploads/2024/08/2024.10.02-TARIFS-LA-CROIX-2025.pdf)) pour 2,1 millions de lecteurs par mois sur papier et 2,5 millions de vues sur le site (source : [Bayard](https://www.bayardmediadeveloppement.com/wp-content/uploads/2024/08/2025.008-Galaxie-LaCroix.pdf)).
 [^RPM]: L'estimation utilisée ici est basée sur le revenu pour mille vues en Allemagne en 2023 (source : [AdCPMRates](https://adcpmrates.com/2022/09/07/adsense-cpm-and-cpc-rates-in-germany-2023/).
 
-L'étude de l'offre des quotidiens nous a permis d'identifier les sources de revenu communément utilisées (cf Tab. 2). Associée à bref état de l'art (cf. Tab.3), nous avons pu établir que :
+L'étude de l'offre des quotidiens nous a permis d'identifier les sources de revenu communément utilisées (cf Tab. 2). Associées à un bref état de l'art (cf. Tab.3), nous avons pu établir que :
 
 1. le suivi des parcours des visiteurs n'est, apparemment, pas rémunérateur en lui-même mais fait partie de l'affichage des publicités ;
 2. les deux principaux modèles de revenu concernant la diffusion d'une publicité distribuée par une régie tierce sont le revenu pour mille vues (RPM) et le revenu par clic ; le second se généralisant pour la partie contractuelle, le premier est souvent donné comme une simple estimation basée sur le taux de clic moyen ;
