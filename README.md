@@ -107,7 +107,7 @@ Certains acteurs se distinguent en offrant en outre aux abonnées l'accès à d'
 
 Le seul modèle alternatif, est celui de *Reporterre*, totalement gratuit mais basé sur des dons. Il est possible que sa fréquence de publication plus basse que celle d'un quotidien (seulement 6 articles par jour en septembre 2025), requière le travail de moins de journalistes à temps plein.
 
-| Bénéfices possibles | Montant unitaire | Quantité nécessaire pour financer un salaire[^salaire]
+| Source possible de revenus | Montant unitaire | Quantité nécessaire pour financer un salaire[^salaire]
 | --- | --: | --:
 | Abonnement | 12€ [^abonnement] | 297
 | Affichage d'une publicité (régie tierce) | 0,00046€ [^RPM] | 7 758 696 
