@@ -118,7 +118,7 @@ Tab. 3 : Source de revenus possibles pour le service d'un quotidien national.
 [^1]: Moins si engagement annuel.
 [^abonnement]: Basé sur l'abonnement mensuel du *Figaro* et du *Monde* (12,99€), de *La Croix* (12,90€), de *Libération* (11,90€), de *L'Humanité* (11€), 
 [^salaire]: Basé sur le coût total employeur du salaire médian 2025 soit 3569€ environ (source : [URSSAF](https://mon-entreprise.urssaf.fr/simulateurs/salaire-brut-net)) 
-[^encart]: Basé sur le prix d'un bandeau court à la une d'un numéro de *La Croix* (source : [Bayard](https://www.bayardmediadeveloppement.com/wp-content/uploads/2024/08/2024.10.02-TARIFS-LA-CROIX-2025.pdf)) pour 2,1 millions de lecteurs par mois sur papier et 2,5 millions de vues sur le site (source : [Bayard](https://www.bayardmediadeveloppement.com/wp-content/uploads/2024/08/2025.008-Galaxie-LaCroix.pdf)).
+[^encart]: Basé sur le prix d'un bandeau court à la une d'un numéro de *La Croix* (source : [Bayard](https://www.bayardmediadeveloppement.com/wp-content/uploads/2024/08/2024.10.02-TARIFS-LA-CROIX-2025.pdf)) en 80 000 exemplaires papier et 80 000 vues sur le site (source : [Bayard](https://www.bayardmediadeveloppement.com/wp-content/uploads/2024/08/2025.008-Galaxie-LaCroix.pdf)).
 [^RPM]: L'estimation utilisée ici est basée sur le revenu pour mille vues en Allemagne en 2023 (source : [AdCPMRates](https://adcpmrates.com/2022/09/07/adsense-cpm-and-cpc-rates-in-germany-2023/).
 
 L'étude de l'offre des quotidiens nous a permis d'identifier les sources de revenu communément utilisées (cf Tab. 2). Associées à un bref état de l'art (cf. Tab.3), nous avons pu établir que :
