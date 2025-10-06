@@ -82,6 +82,58 @@ Dans le détail, les pages les plus mal classées sont celles qui incluent :
 
 À l'inverse, le bon classement (B) de certaines pages (rubriques, articles) de Reporterre montre qu'il existe une marge de progression significative à condition d'adopter des pratiques d'éco-conception et un modèle économique permettant de réduire (totalement ou partiellement) le recours à des services tiers de traqueurs et de publicité.
 
+## Modèle économique
+
+Comme nous l'avons vu dans la section précédente, parmi les choix de conception ayant le plus d'impact environnemental, la plupart sont directement liés au modèle économique du service.
+C'est pourquoi il est nécessaire à ce stade d'analyser leur modèle économique et de définir notre propre modèle permettant une conception plus frugale.  
+
+| Service | Visiteur anonyme | Abonné
+| --- | --- | ---
+| Le Figaro | <ul><li>Publicités (régie tierce)</li><li>Suivi</li></ul> | <ul><li>Lire tous les articles</li><li>Commenter</li><li>Propositions d'événements culturels</li></ul> 
+| Le Monde | <ul><li>Publicités (régie tierce)</li><li>Suivi</li></ul> | <ul><li>Lire tous les articles</li><li>Commenter</li><li>Spotify Premium</li></ul> 
+| La Croix | <ul><li>Publicités (régie intégrée)</li><li>Publicités (régie tierce)</li><li>Suivi</li></ul> | <ul><li>Lire tous les articles</li></ul>
+| Libération | <ul><li>Publicités (régie tierce)</li><li>Suivi</li></ul> | <ul><li>Lire tous les articles</li></ul>
+| L'Humanité | <ul><li>Publicités (régie tierce)</li><li>Suivi</li></ul> | <ul><li>Lire tous les articles</li><li>Lire les archives depuis 1990</li></ul>
+| Reporterre (à titre de comparaison) | <ul><li>Lire tous les articles</li></ul> | Sans objet (mais dons possibles)
+
+Tab. 2 : Offre des services de quotidiens nationaux.
+
+Les offres de service numérique des quotidiens nationaux (cf. Tab. 2 ) se sont harmonisées autour d'un modèle dit "freemium" (de *free*, gratuit, et *premium*, supplément) :
+
+- un accès gratuit à certains articles (ou en nombre limité), financé par la publicité,
+- un accès à l'ensemble des articles, sans publicité, réservé aux abonnés.
+
+Certains acteurs se distinguent en offrant en outre aux abonnées l'accès à d'autres services (événements culturels, spotify commentaires), numériques ou non, susceptibles d'augmenter, à des degrés divers, l'impact environnemental de l'offre.
+
+Le seul modèle alternatif, est celui de *Reporterre*, totalement gratuit mais basé sur des dons. Il est possible que sa fréquence de publication plus basse que celle d'un quotidien (seulement 6 articles par jours en septembre 2025), requière le travail de moins de journalistes à temps plein.
+
+| Bénéfices possibles | Montant unitaire | Quantité nécessaire pour financer un salaire[^salaire]
+| --- | --: | --:
+| Abonnement | 12€ [^abonnement] | 297
+| Affichage d'une publicité (régie tierce) | 0,00046€ [^RPM] | 7 758 696 
+| Diffusion d'une publicité (régie intégrée) | 10 000€ [^encart] | 0,35
+
+Tab. 3 : Source de revenus possibles pour le service d'un quotidien national.
+
+[^1]: Moins si engagement annuel.
+[^abonnement]: Basé sur l'abonnement mensuel du *Figaro* et du *Monde* (12,99€), de *La Croix* (12,90€), de *Libération* (11,90€), de *L'Humanité* (11€), 
+[^salaire]: Basé sur le coût total employeur du salaire médian 2025 soit 3569€ environ (source : [URSSAF](https://mon-entreprise.urssaf.fr/simulateurs/salaire-brut-net)) 
+[^encart]: Basé sur le prix d'un bandeau court à la une d'un numéro de *La Croix* (source : [Bayard](https://www.bayardmediadeveloppement.com/wp-content/uploads/2024/08/2024.10.02-TARIFS-LA-CROIX-2025.pdf)) pour 2,1 millions de lecteurs par mois sur papier et 2,5 millions de vues sur le site (source : [Bayard](https://www.bayardmediadeveloppement.com/wp-content/uploads/2024/08/2025.008-Galaxie-LaCroix.pdf)).
+[^RPM]: L'estimation utilisée ici est basée sur le revenu pour mille vues en Allemagne en 2023 (source : [AdCPMRates](https://adcpmrates.com/2022/09/07/adsense-cpm-and-cpc-rates-in-germany-2023/).
+
+L'étude de l'offre des quotidiens nous a permis d'identifier les sources de revenu communément utilisées (cf Tab. 2). Associée à bref état de l'art (cf. Tab.3), nous avons pu établir que :
+
+1. le suivi des parcours des visiteurs n'est, apparemment, pas rémunérateur en lui-même mais fait partie de l'affichage des publicités ;
+2. les deux principaux modèles de revenu concernant la diffusion d'une publicité distribuée par une régie tierce sont le revenu pour mille vues (RPM) et le revenu par clic ; le second se généralisant pour la partie contractuelle, le premier est souvent donné comme une simple estimation basée sur le taux de clic moyen ;
+3. la diffusion d'une publicité gérée par une régie intégrée à un quotidien existant sous forme numérique et "papier" est incomparablement plus rémunératrice, que par une régie tierce.
+4. un modèle par abonnement semble adapté à financer les salaires des journalistes d'un quotidien à diffusion nationale.
+
+Par conséquent, pour réduire l'impact écologique du service, nous proposons de :
+
+- de renoncer aux publicités gérées par une régie tierce,
+- d'adopter un modèle basé principalement sur les abonnements,
+- de le compléter par un bandeau publicitaire (pour les non abonnés) géré par une régie intégrée.
+
 ## Maquette de l'interface et échantillon de données
 
 Au vu des différents services comparés, des exigences environnementales exprimées plus haut et des scénarios retenus, nous avons défini pour notre prototype une maquette de l'interface et un échantillon de données réalistes.
