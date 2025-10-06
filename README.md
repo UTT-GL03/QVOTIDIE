@@ -103,7 +103,7 @@ Les offres de service numérique des quotidiens nationaux (cf. Tab. 2 ) se sont 
 - un accès gratuit à certains articles (ou en nombre limité), financé par la publicité,
 - un accès à l'ensemble des articles, sans publicité, réservé aux abonnés.
 
-Certains acteurs se distinguent en offrant en outre aux abonnées l'accès à d'autres services (événements culturels, spotify commentaires), numériques ou non, susceptibles d'augmenter, à des degrés divers, l'impact environnemental de l'offre.
+Certains acteurs se distinguent en offrant en outre aux abonnées l'accès à d'autres services (événements culturels, musiques en streaming, commentaires), numériques ou non, susceptibles d'augmenter, à des degrés divers, l'impact environnemental de l'offre.
 
 Le seul modèle alternatif, est celui de *Reporterre*, totalement gratuit mais basé sur des dons. Il est possible que sa fréquence de publication plus basse que celle d'un quotidien (seulement 6 articles par jour en septembre 2025), requière le travail de moins de journalistes à temps plein.
 
