@@ -138,17 +138,18 @@ Par conséquent, pour réduire l'impact écologique du service, nous proposons d
 
 Au vu des différents services comparés, des exigences environnementales exprimées plus haut et des scénarios retenus, nous avons défini pour notre prototype une maquette de l'interface et un échantillon de données réalistes.
 
-L'interface retenue est composée de deux types de "pages Web" :
+Les ressources Web possédant une représentation sur notre application seront de deux types :
 
-- celle des titres des articles du jour ou d'une rubrique thématique,
-- celle d'un article.
+- la "une" du journal (avec une HTTP-URI ayant pour chemin `/`) ou, plus spécifiquement, d'une rubrique thématique (avec pour chemin `/?topic={name}`),
+- un article du journal (avec pour chemin `/{id}`).
 
 ![Maquette des deux types de page](./frontend/mockup.png)
 __Fig.1__: Maquette de l'interface du prototype : __a.__ type de page pour les "titres" (du jour ou d'une rubrique), __b.__ type de page d'un article.
 
+Dans un objectif de sobriété environnementale, les articles sont pour l'instant limités à ceux du jour et de la veille (soit 20 à 30 articles).
+
 Pour des raisons de respect des droits d'auteurs, nous utilisons des données générées (avec [`dummy-json`](https://dummyjson.com)).
-Bien que fictives, ces données correspondent à la structure des services concurrents : 20 à 30 articles comportant un titre possiblement long, un auteur et une rubrique (voir [modèle de données](./frontend/sample_data.hbs)). 
-Dans un objectif de sobriété environnementale, les articles sont limités à ceux du jour et de la veille.
+Bien que fictives, ces données correspondent à la structure des services concurrents : les articles comportent un titre possiblement long, un auteur et une rubrique (voir [modèle de données](./frontend/sample_data.hbs)). 
 
 ## Prototype n°1 : Fonctionnalités pour le scénario prioritaire avec données chargées de manière statique
 
