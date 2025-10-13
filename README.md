@@ -149,7 +149,7 @@ __Fig.1__: Maquette de l'interface du prototype : __a.__ type de page pour les "
 Dans un objectif de sobriété environnementale, les articles sont pour l'instant limités à ceux du jour et de la veille (soit 20 à 30 articles).
 
 Pour des raisons de respect des droits d'auteurs, nous utilisons des données générées (avec [`dummy-json`](https://dummyjson.com)).
-Bien que fictives, ces données correspondent à la structure des services concurrents : les articles comportent un titre possiblement long, un auteur et une rubrique (voir [modèle de données](./frontend/sample_data.hbs)). 
+Bien que fictives, ces données correspondent à la structure des services concurrents : les articles comportent un titre possiblement long, un auteur et une rubrique (voir [modèle de données](https://github.com/UTT-GL03/QVOTIDIE/blob/4f893a869c19a1244e0bdc260b16c39337d06b09/frontend/sample_data.hbs)). 
 
 ## Prototype n°1 : Fonctionnalités pour le scénario prioritaire avec données chargées de manière statique
 
