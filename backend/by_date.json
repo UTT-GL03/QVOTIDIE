@@ -1,9 +1,0 @@
-{
-  "index": {
-    "fields": [
-      {"issued": "desc"}
-    ]
-  },
-  "name": "by_date",
-  "type": "json"
-}
