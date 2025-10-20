@@ -143,7 +143,7 @@ Les ressources Web possédant une représentation sur notre application seront d
 - la "une" du journal (avec une HTTP-URI ayant pour chemin `/`) ou, plus spécifiquement, d'une rubrique thématique (avec pour chemin `/?topic={name}`),
 - un article du journal (avec pour chemin `/{id}`).
 
-![Maquette des deux types de page](./frontend/mockup.png)
+![Maquette des deux types de page](./docs/mockup.png)
 __Fig.1__: Maquette de l'interface du prototype : __a.__ type de page pour les "titres" (du jour ou d'une rubrique), __b.__ type de page d'un article.
 
 Dans un objectif de sobriété environnementale, les articles sont pour l'instant limités à ceux du jour et de la veille (soit 20 à 30 articles).
@@ -164,7 +164,7 @@ Ce scénario nécessite de pouvoir naviguer entre deux types de page : la page d
 
 Nous avons développé la page des titres (cf. Fig. 2) pour qu'elle affiche l'échantillon de données sous une forme proche de ce que prévoyait la maquette.
 
-![Prototype de la page des titres](./frontend/headlines_screenshot.png)
+![Prototype de la page des titres](./docs/headlines_screenshot.png)
 __Fig.2__: Prototype de la page des titres.
 
 Pour l'instant, nous avons choisi un *framework* de mise en page minimaliste ([*PicoCSS*](https://picocss.com)).
@@ -195,7 +195,7 @@ Comme l'échantillon de données ne comportait pas d'identifiants pour les artic
 De même que précédemment, nous avons tenté d'implémenter cette page (cf. Fig. 3) conformément à ce que prévoyait la maquette.
 Notons que nous n'avons pas inclu le choix des rubriques puisque cette fonctionnalité n'est pas incluse dans le scénario prioritaire.
 
-![Prototype de la page d'un article](./frontend/article_screenshot.png)
+![Prototype de la page d'un article](./docs/article_screenshot.png)
 __Fig.3__: Prototype de la page d'un article.
 
 Avec l'ajout de ce modèle de page et la mise en place de la navigation entre les deux modèles, il devient possible d'exécuter le scénario prioritaire complet et de mesurer son impact.
