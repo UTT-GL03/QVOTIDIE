@@ -151,9 +151,11 @@ Dans un objectif de sobriété environnementale, les articles sont pour l'instan
 Pour des raisons de respect des droits d'auteurs, nous utilisons des données générées (avec [`dummy-json`](https://dummyjson.com)).
 Bien que fictives, ces données correspondent à la structure des services concurrents : les articles comportent un titre possiblement long, un auteur et une rubrique (voir [modèle de données](https://github.com/UTT-GL03/QVOTIDIE/blob/4f893a869c19a1244e0bdc260b16c39337d06b09/frontend/sample_data.hbs)). 
 
-## Prototype n°1 : Fonctionnalités pour le scénario prioritaire avec données chargées de manière statique
+## Implémentation du scénario prioritaire
 
-Pour cette première version du prototype :
+### Étape de prototypage : Données chargées de manière statique
+
+Pour cette première version du prototype (`v1.0.0`) :
 
 - l'échantillon de données est encore chargé dans le code de manière statique,
 - les fonctionnalités implémentées ne sont que celles nécessaires pour suivre le scénario prioritaire ("Lire des articles parmi les articles du jour").
@@ -185,7 +187,7 @@ Nous mesurons ici l'effet positif de l'adoption d'outils de développement Web i
 | Mode "développement"  | 75 B 🟩 |  1,5 | 191 | 26 | 2232
 | Mode "pré-production" | 88 A 🟦 | 1,2 | 190 | 4 | 125
 
-__Tab.1__: Évaluation de l'impact du prototype de la page d'accueil.
+__Tab.4__: Évaluation de l'impact du prototype de la page d'accueil.
 
 ### Pages des articles
 
@@ -213,13 +215,16 @@ Ces estimations bien qu'artificiellement basses (puisque les données sont charg
 
 Si nous arrivons à maintenir les émissions en dessous de 1,3 g par page pour notre produit minimum viable, nous pouvons donc espérer proposer une alternative environ 2 fois moins impactante que les services existants (en incluant pourtant la participation au cycle de vie du terminal).
 
-## Prototype n°2 : Fonctionnalités pour le scénario prioritaire avec données statiques chargées de manière dynamique
+### Étape de prototypage : Données statiques chargées de manière dynamique
 
-Pour cette deuxième version du prototype, les données (toujours statiques) sont désormais chargées par le *frontend* à travers le réseau immédiatement après un premier affichage à vide.
+Pour cette nouvelle version du prototype (`v1.0.1`), identique du point de vue fonctionnel, les données (toujours statiques) sont désormais chargées par le *frontend* à travers le réseau immédiatement après un premier affichage à vide.
 Ce comportement, plus réaliste, n'a pour effet qu'une requête supplémentaire par page affichée. 
 
-Concernant l'évaluation de l'impact environemental du scénario, par rapport au tableau précédent (cf. Tab.2), à l'exception du nombre de requêtes qui est incrémenté de 1, les résultats sont strictement identiques.
-D'ailleurs, à partir de cette version, et à moins de changements profonds, l'EcoIndex ne devrait plus évoluer de manière significative.
+Concernant l'évaluation de l'impact environnemental du scénario, par rapport au tableau précédent (cf. Tab.2), à l'exception du nombre de requêtes qui est incrémenté de 1, les résultats sont strictement identiques.
+
+## Mesures de la consultation proprement dite
+
+À partir de cette version, et à moins de changements profonds, l'EcoIndex ne devrait plus évoluer de manière significative.
 Nous utiliserons désormais un autre logiciel, *GreenFrame*, qui évalue non pas l'impact "environné" de la consultation (incorporant une participation au cycle de vie du terminal) mais celui de la consultation proprement dite (cf. Tab.3) et de manière beaucoup plus fiable à partir des statistiques d'utilisation des ressources physiques (CPU, mémoire, réseau, disque).
 
 | | Impact de la consultation des titres | Impact de la consultation d'un article
