@@ -182,8 +182,8 @@ Nous mesurons ici l'effet positif de l'adoption d'outils de développement Web i
 
 |   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
 |---|--------:|------------:|--------------:|---------:|---------------------:
-| Mode "développement"  | 80 A🟢 |  1,4 | 144 | 21 | 1494
-| Mode "pré-production" | 90 A🟢 | 1,2 | 141 | 4 | 94
+| Mode "développement"  | 75 B 🟩 |  1,5 | 191 | 26 | 2232
+| Mode "pré-production" | 88 A 🟦 | 1,2 | 190 | 4 | 125
 
 __Tab.1__: Évaluation de l'impact du prototype de la page d'accueil.
 
@@ -202,16 +202,16 @@ Avec l'ajout de ce modèle de page et la mise en place de la navigation entre le
 
 |   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
 |---|--------:|------------:|--------------:|---------:|---------------------:
-| 1. Consulter les titres 					   | 89 A🟢 | 1,2 | 166 | 4 | 102
-| 2. Choisir et lire un article 			   | 95 A🟢 | 1,1 |  31 | 4 | 102
-| 3. Revenir aux titres et les consulter	| 89 A🟢 | 1,2 | 166 | 4 | 102
-| 4. Choisir et lire un autre article 		| 95 A🟢 |  1,1|  29 | 4 | 102
+| 1. Consulter les titres 					   | 88 A 🟦 | 1,2 | 190 | 4 | 125
+| 2. Choisir et lire un article 			   | 96 A 🟦 | 1,1 |  24 | 4 | 1
+| 3. Revenir aux titres et les consulter	| 89 A 🟦 | 1,2 | 190 | 4 | 1
+| 4. Choisir et lire un autre article 		| 96 A 🟦 |  1,1|  22 | 4 | 1
 
 __Tab.2__: Évaluation de l'impact du scénario "Lire des articles parmi les articles du jour" dans le prototype n°1.
 
 Ces estimations bien qu'artificiellement basses (puisque les données sont chargées de manière statique) sont tout de même à comparer avec [celles des services concurrents](https://htmlpreview.github.io/?https://raw.githubusercontent.com/UTT-GL03/QVOTIDIE/main/benchmark/benchmark.html) vues précédemment.
 
-Si nous arrivons à maintenir les émissions en dessous de 1,5 g pour notre produit minimum viable, nous pouvons donc espérer proposer une alternative 2 à 3 fois moins impactante que les services existants.
+Si nous arrivons à maintenir les émissions en dessous de 1,3 g par page pour notre produit minimum viable, nous pouvons donc espérer proposer une alternative environ 2 fois moins impactante que les services existants (en incluant pourtant la participation au cycle de vie du terminal).
 
 ## Prototype n°2 : Fonctionnalités pour le scénario prioritaire avec données statiques chargées de manière dynamique
 
