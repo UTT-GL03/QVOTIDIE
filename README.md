@@ -222,3 +222,16 @@ Ce comportement, plus réaliste, n'a pour effet qu'une requête supplémentaire 
 
 Concernant l'évaluation de l'impact environnemental du scénario, par rapport au tableau précédent (cf. Tab.2), à l'exception du nombre de requêtes qui est incrémenté de 1, les résultats sont strictement identiques.
 
+## Mesures de la consommation énergétique lors du passage à l'échelle
+
+Maintenant que notre prototype est réaliste en termes de nombre de requêtes, nous pouvons simuler les effets du "passage à l'échelle". 
+
+Dans le cas qui nous occupe de la presse quotidienne et dans le cadre des fonctionnalités envisagées (consultation d'articles), l'augmentation de la quantité des données à traiter ne viendra ni de l'augmentation du nombre de journalistes ni même de celle  des lecteurs.
+Par contre, il est d'usage sur les applications de presse d'avoir accès aux archives du journal,
+le but étant d'éclairer l'actualité à la lumière du passé plus ou moins proche.
+Cette exigence fonctionnelle bien que coûteuse du point de vue environnemental nous semble contribuer grandement à l'utilité sociale de la plateforme.
+Par conséquent nous adopterons également ce choix de conception.
+
+L'augmentation du volume d'articles est linéaire : à raison de 25 nouveaux articles par jour, la base de données sera de 3000 articles au bout de 4 mois (et ainsi de suite).
+
+
