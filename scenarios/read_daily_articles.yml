@@ -1,0 +1,28 @@
+# To be used with GreenIT Analysis CLI
+- name: Consulter les actualités
+  url: http://localhost/
+  actions:
+    - name: Consulter les titres
+      type: scroll
+    - name: Choisir un article
+      type: click
+      element: .grid:nth-child(1) > article > a
+      pageChange: true
+      waitForSelector: article > p
+    - name: Lire l'article
+      type: scroll
+    - name: Retourner aux titres
+      type: click
+      element: header
+      pageChange: true
+      waitForSelector: .grid
+    - name: Consulter les titres
+      type: scroll
+    - name: Choisir un autre article
+      type: click
+      element: .grid:nth-child(2) > article:nth-child(2) > a
+      pageChange: true
+      waitForSelector: article > p
+    - name: Lire l'autre article
+      type: scroll
+
