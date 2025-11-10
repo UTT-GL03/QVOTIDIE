@@ -179,7 +179,7 @@ En effet, à moins de mettre en place des techniques avancées d'optimisation (e
 
 Dans l'état actuel du prototype, il est possible d'avoir une première idée de l'impact environnemental du *frontend*.
 Bien entendu, il manque encore le chargement dynamique des données, mais nous pouvons déjà évaluer l'impact de l'affichage des données et du *framework* (au sens large : *React*, *PicoCSS*, *DayJS*).
-Cette évaluation de l'impact (cf. Tab.1) est déjà encourageante en mode "développement" mais encore plus en mode "pré-production".
+Cette évaluation de l'impact (cf. Tab.4) est déjà encourageante en mode "développement" mais encore plus en mode "pré-production".
 Nous mesurons ici l'effet positif de l'adoption d'outils de développement Web intégrant la ["minification"](https://fr.wikipedia.org/wiki/Minification) (cf. *Wikipédia*) du code et la concaténation du code d'une part et des feuilles de style d'autre part.
 
 |   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
@@ -209,7 +209,7 @@ Avec l'ajout de ce modèle de page et la mise en place de la navigation entre le
 | 3. Revenir aux titres et les consulter	| 89 A 🟦 | 1,2 | 190 | 4 | 1
 | 4. Choisir et lire un autre article 		| 96 A 🟦 |  1,1|  22 | 4 | 1
 
-__Tab.2__: Évaluation de l'impact du scénario "Lire des articles parmi les articles du jour" dans le prototype n°1.
+__Tab.5__: Évaluation de l'impact du scénario "Lire des articles parmi les articles du jour" dans le prototype v1.0.0.
 
 Ces estimations bien qu'artificiellement basses (puisque les données sont chargées de manière statique) sont tout de même à comparer avec [celles des services concurrents](https://htmlpreview.github.io/?https://raw.githubusercontent.com/UTT-GL03/QVOTIDIE/main/benchmark/benchmark.html) vues précédemment.
 
@@ -220,7 +220,7 @@ Si nous arrivons à maintenir les émissions en dessous de 1,3 g par page pour n
 Pour cette nouvelle version du prototype (`v1.0.1`), identique du point de vue fonctionnel, les données (toujours statiques) sont désormais chargées par le *frontend* à travers le réseau immédiatement après un premier affichage à vide.
 Ce comportement, plus réaliste, n'a pour effet qu'une requête supplémentaire par page affichée. 
 
-Concernant l'évaluation de l'impact environnemental du scénario, par rapport au tableau précédent (cf. Tab.2), à l'exception du nombre de requêtes qui est incrémenté de 1, les résultats sont strictement identiques.
+Concernant l'évaluation de l'impact environnemental du scénario, par rapport au tableau précédent (cf. Tab.5), à l'exception du nombre de requêtes qui est incrémenté de 1, les résultats sont strictement identiques.
 
 ## Mesures de la consommation énergétique lors du passage à l'échelle
 
