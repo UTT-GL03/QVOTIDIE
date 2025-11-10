@@ -234,4 +234,19 @@ Par conséquent nous adopterons également ce choix de conception.
 
 L'augmentation du volume d'articles est linéaire : à raison de 25 nouveaux articles par jour, la base de données sera de 3000 articles au bout de 4 mois (et ainsi de suite).
 
+### Évolution de l'EcoIndex lors du passage à l'échelle
 
+Produites désormais de manière automatique lors de l'intégration continue, les mesures nécessaires à la production de l'EcoIndex, [avant](https://github.com/UTT-GL03/QVOTIDIE/actions/runs/19211909192/artifacts/4512754147) et [après](https://github.com/UTT-GL03/QVOTIDIE/actions/runs/19224015758/artifacts/4516341581) la simulation du passage à l'échelle retraduisent bien (cf. Tab.6) l'augmentation du poids des téléchargements, mais aussi de l'augmentation du nombre d'éléments de la page des titres.
+
+|   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
+|---|--------:|------------:|--------------:|---------:|---------------------:
+| 1. Consulter les titres 					   | <del>81 A 🟦</del><br/>29 E 🟥 | <del>1,4</del><br/>2,4 | <del>198</del><br/>19 014 | 6 | <del>446</del><br/>11 400
+| 2. Choisir et lire un article 			   | <del>90 A 🟦</del><br/>76 B 🟩 | <del>1,1</del><br/>1,5 | 30 | 2 | <del>115</del><br/>10 800
+| 3. Revenir aux titres et les consulter	| <del>83 A 🟦</del><br/>30 E 🟥 | <del>1,3</del><br/>2,4 | <del>198</del><br/>19 014 | 2 | <del>115</del><br/>10 800
+| 4. Choisir et lire un autre article 		| <del>90 A 🟦</del><br/>76 B 🟩 |  <del>1,2</del><br/>1,5 | 26 | 2 | <del>115</del><br/>10 800
+
+__Tab.6__: Effet du passage à l'échelle sur l'impact du scénario "Lire des articles parmi les articles du jour" dans le prototype v1.0.1.
+
+On pourrait s'étonner que la baisse de l'EcoIndex soit beaucoup plus forte pour la page des titres que pour la page d'un article alors que l'augmentation du poids des téléchargements est analogue.
+Ceci s'explique par le fait que l'EcoIndex vise à évaluer un impact global, incluant une part de la fabrication et de la fin de vie des terminaux, et que cette part augmente avec le nombre d'éléments de la page.
+Pour évaluer plus précisément l'impact de la consultation elle-même nous utiliserons un autre outil de mesure : GreenFrame.
