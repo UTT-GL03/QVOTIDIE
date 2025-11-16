@@ -16,7 +16,7 @@ function Headlines() {
       .then(data => {
         setArticlesByRow(
           Object.values(
-            Object.groupBy(data.articles, (x, i) => Math.floor(i/3))
+            Object.groupBy(data.docs, (x, i) => Math.floor(i/3))
           )
         )
       })
