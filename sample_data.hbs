@@ -1,7 +1,8 @@
 {
-  "articles": [
+  "docs": [
     {{#repeat 3000}}
     {
+      "_id": "{{@index}}",
       "section": "{{random 'France' 'International' 'Économie' 'Culture' 'Planète' 'Santé' 'Art de vivre' 'Sport'}}",
       "issued": "{{date '2025-10-17' '2025-10-18' 'YYYY-MM-DD hh:mm'}}",
       "creator": "{{firstName}} {{lastName}}",

@@ -16,7 +16,7 @@ function Headlines() {
       .then(data => {
         setArticlesByRow(
           Object.values(
-            Object.groupBy(data.articles, (x, i) => Math.floor(i/3))
+            Object.groupBy(data.docs, (x, i) => Math.floor(i/3))
           )
         )
       })
@@ -35,14 +35,14 @@ function Headlines() {
   )
 }
 
-function Headline({heading, issued, section}) {
+function Headline({_id, heading, issued, section}) {
   return (
     <article>
       <header>
         <span className="tag"> {section} </span>
         <time> {dayjs(issued).fromNow()} </time>
       </header>
-      <Link to={issued}>
+      <Link to={_id}>
         <h2>{heading}</h2>
       </Link>
     </article>

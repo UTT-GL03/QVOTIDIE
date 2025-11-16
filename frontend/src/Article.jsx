@@ -15,7 +15,7 @@ function Article() {
     fetch('/sample_data.json')
       .then(x => x.json())
       .then(data => {
-        setArticle(data.articles.find(x => id === x.issued))
+        setArticle(data.docs.find(x => id === x._id))
       })
 
   }, [id])
