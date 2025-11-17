@@ -250,3 +250,35 @@ __Tab.6__: Effet du passage à l'échelle sur l'impact du scénario "Lire des ar
 On pourrait s'étonner que la baisse de l'EcoIndex soit beaucoup plus forte pour la page des titres que pour la page d'un article alors que l'augmentation du poids des téléchargements est analogue.
 Ceci s'explique par le fait que l'EcoIndex vise à évaluer un impact global, incluant une part de la fabrication et de la fin de vie des terminaux, et que cette part augmente avec le nombre d'éléments de la page.
 Pour évaluer plus précisément l'impact de la consultation elle-même nous utiliserons un autre outil de mesure : GreenFrame.
+
+### Mesure de la consommation énergétique liée à la consultation
+
+Le logiciel GreenFrame est capable d'estimer, pour les différents composants de l'architecture, la consommation énergétique :
+
+- du CPU (à partir du temps de calcul),
+- de la mémoire vive (à partir de la taille des données mémorisées),
+- du disque (à partir de la taille des données lues et écrites),
+- du réseau (à partir de la taille des données reçues et envoyées),
+- pour le navigateur uniquement, de l'écran (à partir du temps d'exécution du scénario).
+
+ (a)                 | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh) | total (Wh)   |
+| ------------------ | ---------- | ---------- | --------- | ------------------ | ----------- | ------------ | 
+| Navigateur         | 0.0027     | 0.000058   | 0.0       | <mark>0.062</mark> | <mark>0.069</mark> | 0.13  |
+| Serveur Web        | 0.000061   | 0.000020   | 0.0       | <mark>0.063</mark> | 0.0                | 0.063 |
+
+| (b)                | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh)        | total (Wh) |
+| ------------------ | ---------- | ---------- | --------- | ------------------ | ------------------ | ---------- | 
+| Navigateur         | 0.0035     |  0.000065  |  0.0      | <mark>0.062</mark> | <mark>0.072</mark> |  0.14      |
+| Serveur Web        | 0.000074   |  0.000021  |  0.0      | <mark>0.063</mark> | 0.0                |  0.064     |
+
+__Tab.7__: Estimation de la consommation énergétique de la consultation des titres du journal (premier tableau) et d'un article (second tableau).
+
+Par rapport à ce que pouvait laisser penser l'EcoIndex, les résultats (cf. Tab.7) indiquent que la consommation due à la consultation de l'index (avec ses 3000 titres) est équivalente à celle d'un article. Autrement dit, l'affichage en lui même de ces données en grand nombre est négligeable par rapport à la transmission de ces données sur le réseau.
+
+Par contre, l'affichage de ces données a bien un impact indirect : en augmentant le temps de lecture, il a un effet déterminant sur le temps d'éclairage de l'écran. 
+De fait, les trois éléments ayant le plus d'impact (à peu près à égalité, le reste étant négligeable), sont ici : 
+
+- l'écran du client,
+- le réseau du client,
+- le réseau du serveur.
+
