@@ -282,3 +282,41 @@ De fait, les trois éléments ayant le plus d'impact (à peu près à égalité,
 - le réseau du client,
 - le réseau du serveur.
 
+### Impact de l'introduction d'une base de données
+
+Afin de réduire l'impact énérgétique du réseau, nous stockons désormais les données de l'application (`v2.0.0`) dans une base de données (*CouchDB*).
+Cette évolution nous permet, lors de l'affichage d'un article, de charger un seul article plutôt que 3000.
+
+|                    | cpu (s)    | screen (s) | mem (B) | disk (B) | network (B) |
+| ------------------ | ---------- | ---------- | --------| -------- | ----------- |
+| Navigateur | <del>0,133</del><br/><add>0,0754</add>| 17,6 | <del>1,56e+8</del><br/><add>1,24e+8</add> | 0,00 | <del>1,22e+7</del><br/><add>3,64e+5</add> |
+| Serveur Web | <del>0,000856</del><br/><add>0,000210</add> | 0,00 | 5,56e+6  | 0,00 | <del>1,22e+7</del><br/><add>3,62e+5</add>
+| Base de données | <del>0</del><br/><add>0,0357</add> | 0,00 | <del>0</del><br/><add>1,27e+8</add> | 0,00 | <del>0</del><br/><add>1,80e+3</add>
+
+__Tab.8__: Effet sur l'utilisation des ressources de l'introduction d'une base de données dans l'application, lors de la consultation d'un article.
+
+Cette amélioration (cf. Tab.8) est assez spectaculaire avec notamment (pour les valeurs significatives) : 
+
+- une réduction de 97% de la quantité de données chargées par le client,
+- une réduction de 51% de la charge du CPU sur le client,
+- une réduction de 24% de la mémoire vive utilisée par le client,
+- une utilisation des ressources par la base de données négligeable excepté une consommation très importante de mémoire vive (16 fois la quantité nécessaire pour le serveur Web).
+
+ (a)              | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh) | total (Wh)   |
+| --------------- | ---------- | ---------- | --------- | ------------------ | ----------- | ------------ | 
+| Navigateur      | 0,0027     | 0,000058   | 0,0       | 0,062 | 0,069 | 0,13  |
+| Serveur Web     | <del>0,000061</del><br/>0,0000043 | <del>0,000020</del><br/>0,0000029 | 0,0 | <mark><del>0,063</del></mark><br/>0,0019 | 0,0 | <del>0,063</del><br/>0,0019 |
+| Base de données | <del>0</del><br/>0,0033 | <del>0</del><br/>0,000066 | 0,0 | <del>0</del><br/><mark>0,064</mark> | 0,0 | <del>0</del><br/>0,067 |
+
+| (b)             | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh)        | total (Wh) |
+| --------------- | ---------- | ---------- | --------- | ------------------ | ------------------ | ---------- | 
+| Navigateur      | <del>0,0035</del><br/>0,00094 | <del>0,000065</del><br/>0,000046 | 0,0 | <del><mark>0,062</mark></del><br/>0,0019 | <mark>0,072</mark> | <del>0,14</del><br/>0,075 |
+| Serveur Web     | <del>0,000074</del><br/>0,0000037 | <del>0,000021</del><br/>0,0000029 | 0,0 | <del><mark>0,063</mark></del><br/>0,0019 | 0,0 | <del>0,064</del><br/>0,0019 |
+| Base de données | <del>0</del><br/>0,00062 | <del>0</del><br/>0,000065 | 0,0 | <del>0</del><br/>0,0000092 | 0,0 | <del>0</del><br/>0,00070 |
+
+__Tab.9__: Effet sur la consommation énergétique de l'introduction d'une base de données dans l'application, lors de la consultation des titres du journal (premier tableau) et d'un article (second tableau).
+
+Pour la consultation d'un article, cette forte diminution de l'utilisation des ressources se traduit par une consommation énérgétique estimée (cf. Tab.9b) quasiment minimale puisqu'à peine supérieure à celle de l'écran.
+
+Concernant la consultation des titres (cf. Tab.9a), par contre, l'ajout de la base de données a eu pour seul effet notable de remplacer la consommation du réseau du serveur Web par celle du réseau de la base de données.
+Pour réduire cette consommation, nous devons maintenant réduire drastiquement la quantité de données chargées par la page des titres du journal.
