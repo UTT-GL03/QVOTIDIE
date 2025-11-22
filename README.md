@@ -321,7 +321,7 @@ Pour la consultation d'un article, cette forte diminution de l'utilisation des r
 Concernant la consultation des titres (cf. Tab.9a), par contre, l'ajout de la base de données a eu pour seul effet notable de remplacer la consommation du réseau du serveur Web par celle du réseau de la base de données.
 Pour réduire cette consommation, nous devons maintenant réduire drastiquement la quantité de données chargées par la page des titres du journal.
 
-### Stratégie de limitation du nombre d'éléments affichés
+### Limitation du nombre d'éléments affichés
 
 Dans sa version sur papier, la page des titres d'un journal ne donne accès qu'aux articles du jour (ceux terminés lors du "bouclage").
 Cependant, cette stratégie ne peut pas être transposée directement au numérique puisque sur les applications de presse, les articles sont d'ordinaire rendus publics au fur et à mesure qu'ils sont terminés.
@@ -333,4 +333,30 @@ Dès lors, deux stratégies équivalentes peuvent être envisagées pour donner 
 Dans un cas comme dans l'autre, ce filtre nécessite d'indexer préalablement les articles en fonction de leur date et heure de publication en ligne.
 
 Notons que nous choisirons la seconde stratégie qui permet d'éviter plus facilement au lecteur une disparité d'expérience suivant le moment de la journée où il consulterait la page des titres.
+
+Par ailleurs, comme nous l'avions défini au départ, il est d'usage et souhaitable d'avoir accès aux anciens articles.
+Par conséquent, l'application permettra de charger d'autres titres à la demande de l'usager et de manière progressive.
+
+![More](./docs/headlines2_screenshot.png)
+__Fig.4__: Chargement progressif (à la demande) des titres du journal (copie d'écran).
+
+|                 | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh) | total (Wh)   |
+| --------------- | ---------- | ---------- | --------- | ------------------ | ----------- | ------------ | 
+| Navigateur      | <del>0,0027</del><br/>0,00067 | <del>0,000058</del><br/>0,000043 | 0,0 | <del><mark>0,062</mark></del><br/>0,0019 | <mark>0,069</mark> | <del>0,13</del><br/>0,072 |
+| Serveur Web     | 0,0000043 | 0,0000029 | 0,0 | 0,0019 | 0,0 | 0,0019 |
+| Base de données | <del>0,0033</del><br/>0,00076 | 0,000066 | 0,0 | <del><mark>0,064</mark></del><br/>0,000036 | 0,0 | <del>0,067</del><br/>0,00086 |
+
+__Tab.10__ : Effet sur la consommation énergétique du chargement progressif (à la demande) lors de la consultation des titres du journal.
+
+L'implémentation de la stratégie en question (`v2.0.1`, cf. Fig.4) a l'effet attendu (cf. Tab.10) : là aussi, la consommation électrique de l'ensemble des composants se retrouve réduite quasiment à celle de l'écran.
+
+On pourrait bien-sûr opposer le fait que, dès lors, si l'on souhaitait afficher l'ensemble des éléments, la consommation serait supérieure à celle qu'elle était avant la mise en place du chargement progressif.
+Cependant, la centaine de clics qui serait nécessaire rend ce scénario d'utilisation peu probable,
+d'autant plus que les titres les plus récents sont affichés en premier.
+
+Pour résumer, le passage à l'échelle de 25 articles de presse à 3000 (correspondant respectivement aux données d'une journée et de 4 mois), avait entraîné un triplement de la consommation électrique.
+Par des techniques simples de base de données (sélection du document pertinent, projection des attributs nécessaires et pagination des résultats), la consommation électrique est revenue a ses valeurs initiales.
+En l'état, la consommation électrique est constante par rapport à la volumétrie des articles de journal, et à un niveau si bas que la part due au CPU, à la mémoire et au réseau est négligeable par rapport à celle de l'écran.
+
+L'enjeu dans les améliorations à venir de l'application sera de veiller à conserver cette sobriété.
 
