@@ -72,7 +72,7 @@ function Headline({_id, heading, issued, section}) {
         <span className="tag"> {section} </span>
         <time> {dayjs(issued).fromNow()} </time>
       </header>
-      <Link to={_id}>
+      <Link to={'/' + _id}>
         <h2>{heading}</h2>
       </Link>
     </article>
