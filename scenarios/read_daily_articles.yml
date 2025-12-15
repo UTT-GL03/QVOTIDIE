@@ -1,23 +1,23 @@
 # To be used with GreenIT Analysis CLI
 - name: Consulter les actualités
   url: http://localhost/
-  waitForSelector: .grid
+  waitForSelector: .col-md-4
   actions:
     - name: Choisir un article
       type: click
-      element: .grid:nth-child(1) > article > a
+      element: .col-md-4:nth-child(1) .card a
       pageChange: true
       waitForSelector: article > p
     - name: Lire l'article
       type: scroll
     - name: Retourner aux titres
       type: click
-      element: header
+      element: .navbar-brand
       pageChange: true
-      waitForSelector: .grid
+      waitForSelector: .col-md-4
     - name: Choisir un autre article
       type: click
-      element: .grid:nth-child(2) > article:nth-child(2) > a
+      element: .col-md-4:nth-child(5) .card a
       pageChange: true
       waitForSelector: article > p
     - name: Lire l'autre article

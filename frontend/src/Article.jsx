@@ -3,6 +3,7 @@ import { useParams } from 'react-router'
 import dayjs from 'dayjs'
 import localizedFormat from 'dayjs/plugin/localizedFormat'
 import 'dayjs/locale/fr'
+import Container from 'react-bootstrap/Container';
 
 dayjs.extend(localizedFormat)
 dayjs.locale('fr')
@@ -22,7 +23,7 @@ function Article() {
 
   const {heading, creator, issued, content=''} = article
   return (
-    <main className="container">
+    <Container>
       <article>
         <header>
           <h2>{heading}</h2>
@@ -35,7 +36,7 @@ function Article() {
           </p>
         )}
       </article>
-    </main>
+    </Container>
   )
 }
 

@@ -3,6 +3,12 @@ import { Link, useParams } from 'react-router'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import 'dayjs/locale/fr'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
+import Badge from 'react-bootstrap/Badge';
+import Button from 'react-bootstrap/Button';
 
 dayjs.extend(relativeTime)
 dayjs.locale('fr')
@@ -33,9 +39,8 @@ function Headlines() {
       .then(data => {
         setArticlesByRow([
           ...previousArticles,
-          ...Object.values(
-            Object.groupBy(data.docs, (x, i) => Math.floor(i/3))
-          )
+          ...data.docs
+          
         ])
         setNextBookmark(data.bookmark)
       })
@@ -50,32 +55,34 @@ function Headlines() {
   }, [section])
 
   return (
-    <main className="container">
-      {articlesByRow.map((x, i) =>
-        <div key={i} className="grid">
-          {x.map((doc, j) =>
-            <Headline {...doc} key={j} />
-          )}
-        </div>
-      )}
-      <button type="submit" onClick={ () => setRequestedBookmark(nextBookmark) }>
+    <Container>
+      <Row className="gy-4">
+        {articlesByRow.map((x, i) =>
+          <Col key={i} md="4">
+            <Headline {...x} />
+          </Col>
+        )}
+      </Row>
+      <Button type="submit" onClick={ () => setRequestedBookmark(nextBookmark) }>
         Suivant
-      </button>
-    </main>
+      </Button>
+    </Container>
   )
 }
 
 function Headline({_id, heading, issued, section}) {
   return (
-    <article>
-      <header>
-        <span className="tag"> {section} </span>
+    <Card className="h-100">
+      <Card.Header>
+        <Badge> {section} </Badge>
         <time> {dayjs(issued).fromNow()} </time>
-      </header>
+      </Card.Header>
+      <Card.Body>
       <Link to={'/' + _id}>
         <h2>{heading}</h2>
       </Link>
-    </article>
+      </Card.Body>
+    </Card>
   )
 }
 
