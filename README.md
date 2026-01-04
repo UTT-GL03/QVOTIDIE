@@ -360,3 +360,36 @@ En l'état, la consommation électrique est constante par rapport à la volumét
 
 L'enjeu dans les améliorations à venir de l'application sera de veiller à conserver cette sobriété.
 
+## Validation des contributions 
+
+Maintenant que nous disposons d’un produit minimum viable sobre et passant à l’échelle, il s’agit de continuer à améliorer sa qualité d'usage sans augmenter significativement son impact écologique. Deux contributions ont été prototypées et ont fait l’objet de mesures d’impact :
+
+- une nouvelle fonctionnalité de consultation des titres par rubrique (cf. Fig.5),
+- le remplacement (envisagé précédemment) du *framework* de mise en page (cf. Fig.6) : de  *PicoCSS*, très minimaliste, vers *Boostrap*, présent sur 15% des sites Web dans le monde (source : [W3Techs](https://w3techs.com/technologies/history_overview/css_framework/all)).
+
+![Prototype de la page d'une rubrique](./docs/section_screenshot.png)
+__Fig.5__ : Prototype de la page d’une rubrique (copie d’écran).
+
+![Prototype de la page d'une rubrique](./docs/headlines_screenshot_bootstrap.png)
+__Fig.6__ : Prototypes de la page des titres avec *Bootstrap* plutôt que *PicoCSS*.
+
+Avec l’ajout de la nouvelle fonctionnalité, les mesures (des anciennes fonctionnalités) sont inchangées. 
+La consultation de la page d’une rubrique a par ailleurs la même consommation énergétique que celle des titres.
+L’ajout de ces pages, possiblement plus en accord avec les centres d’intérêt des lecteurs, pourrait entraîner un temps de lecture global plus long. 
+Cependant, nous ne pensons pas que le seul fait de disposer de quelques rubriques thématiques suffise à mettre le lecteur dans une « boucle addictive » comparable à ce qui est attesté sur les réseaux sociaux.
+Ce risque est d'autant plus faible si le temps de consultation global est borné par des facteurs extérieurs comme par exemple le temps de transport en commun entre le domicile et le lieu de travail.
+Pour toutes ces raisons, nous considérons que l’impact écologique de cette nouvelle fonctionnalité est négligeable.
+Nous validons donc l’ajout de cette fonctionnalité.
+
+|                 | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh) | total (Wh)   |
+| --------------- | ---------- | ---------- | --------- | ------------------ | ----------- | ------------ | 
+| Navigateur      | <del>0,00067</del><br/><mark>0,0014</mark> | 0,000043 | 0,0 | <del> 0,0019 </del><br/><mark>0,0030</mark> | 0,069 | <del>0,072</del><br/><mark>0.074</mark> |
+| Serveur Web     | 0,0000043 | 0,0000029 | 0,0 | <del>0,0019</del><br/><mark>0,0029</mark> | 0,0 | <del>0,0019</del><br/><mark>0,0029</mark> |
+| Base de données | 0,00076 | 0,000066 | 0,0 | 0,000036 | 0,0 | 0,00086 |
+
+__Tab.11__ : Effet sur la consommation énergétique du remplacement de *PicoCSS* par *Bootstrap*.
+
+Concernant le changement de framework de mise en page, les mesures (cf. Tab.11) montrent un doublement de la consommation énergétique du CPU dans le navigateur et une augmentation de 50% de la consommation du réseau entre le navigateur et le serveur Web statique.
+Si la première est négligeable par rapport à la consommation énergétique globale, la seconde suffit cependant à l’augmenter de 4%.
+Cette légère dégradation de la sobriété de l’application aurait pu être tolérée si la modification apportée s’était accompagnée d’une amélioration notable de la qualité d’usage. 
+Comme ce n’est pas réellement le cas, nous décidons de ne pas valider cette contribution et donc de ne pas intégrer la branche de développement correspondante. 
