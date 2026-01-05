@@ -419,3 +419,4 @@ Par contre, un certain nombre de choix de conception ont été pris pour éviter
 les contenus affichés ne nécessitent pas plus de quelques minutes de lecture,
 le chargement des pages suivantes n’est pas déclenché de manière automatique (par ce que certains appellent le « scrolling infini »),
 aucune notification n’incite le lecteur à revenir consulter l’application.
+Au delà de ces quelques principes, l’objectif de la réduction de la consommation énergétique de l’écran ouvre des perspectives aussi nouvelles que déstabilisantes pour le génie logiciel : du point de vue écologique, une bonne application serait soit une application sans affichage soit une application dont le temps d’utilisation serait le plus faible possible…
