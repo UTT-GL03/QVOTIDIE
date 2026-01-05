@@ -393,3 +393,29 @@ Concernant le changement de framework de mise en page, les mesures (cf. Tab.11) 
 Si la première est négligeable par rapport à la consommation énergétique globale, la seconde suffit cependant à l’augmenter de 4%.
 Cette légère dégradation de la sobriété de l’application aurait pu être tolérée si la modification apportée s’était accompagnée d’une amélioration notable de la qualité d’usage. 
 Comme ce n’est pas réellement le cas, nous décidons de ne pas valider cette contribution et donc de ne pas intégrer la branche de développement correspondante. 
+
+## Bilan et perspectives
+
+De ce projet et des estimations ou mesures réalisées avec *GreenIT Analysis* et *GreenFrame*, je retiens trois points principaux.
+
+Le premier de ces points est illustré par la différence d’ordre de grandeur entre les émissions de gaz à effets de serre évalués par *GreenFrame*, d’une part, pour la consultation seulement, et par *GreenIT Analysis*, d’autre part, pour l’impact global incluant le cycle de vie des équipements. 
+Le fait de réaliser des applications Web plutôt que natives permet aux usagers de conserver des terminaux anciens.
+Dans l’hypothèse cependant où les usagers ne seraient plus en mesure de mettre à jour leurs navigateurs depuis plus de 2 ans et demi, il faudrait configurer différemment le processus de « transpilation » (source : [Vite](https://vite.dev/guide/#browser-support)).
+
+Le second point, mis en évidence par toutes les mesures réalisées avec *GreenFrame*, est la part significative – pour les applications Web – de l’impact du réseau par rapport à celle des CPU et à plus forte raison de la mémoire.
+Ce point peut être contre-intuitif pour des ingénieurs logiciels qui ont généralement appris à optimiser l’utilisation de ces deux dernières ressources et non de la première.
+Dans ce projet, le choix de conception le plus efficace pour réduire le nombre et la taille des requêtes a été de renoncer aux régies publicitaires.
+Le modèle économique du service a été revu pour être basé principalement sur les abonnements et être complété par quelques rares publicités, en régie interne (pour une meilleure valorisation et pour être en capacité de n’accepter que les publicités pour des services ou produits compatibles avec nos principes de sobriété). 
+Un second choix de conception a été de renoncer aux vignettes couramment associées aux articles (ce qui n’empêche pas ponctuellement d’illustrer un article par une véritable photographie de presse).
+Du point de vue de l’implémentation, côté-serveur, la sélection des enregistrements pertinents et la pagination a permis de conserver une taille des données échangées, faible et constante malgré une augmentation croissante des données stockées.
+Enfin, nous avons pu mettre en évidence que le choix des bibliothèques de programmation (*PicoCSS* plutôt que *Boostrap*) avait un effet non négligeable sur la taille des données échangées et donc sur la consommation énergétique.
+
+Le troisième point, également révélé par les mesures de *GreenFrame*, porte sur la différence de consommation énergétique entre le côté client et le côté serveur et ce essentiellement en raison de la part de la consommation due à l’écran.
+Dans le cas de notre application Web pour laquelle nous avons choisi de réaliser le rendu côté-client (*client-side rendering*) et où les données sont indexées côté-serveur par une algorithme *Map/Reduce*, la consommation énergétique du serveur est 24 fois plus faible que celle du client.
+Les bonnes performances de cette approche, portée par nos choix techniques (resp. *React* et *CouchDB*), nous montrent au passage que la frugalité numérique peut être cherchée et atteinte avec des environnements de développement récents.
+Il serait intéressant à l’avenir de vérifier si la consommation énergétique globale de l’application Web serait supérieure avec d’autres choix, plus « traditionnels », comme le rendu côté-serveur ou une gestion de base de donnés relationnelle.
+La consommation de l’écran, pour sa part, ne peut pas être réduite par une mesure technique puisqu’elle ne dépend que de la durée du scénario.
+Par contre, un certain nombre de choix de conception ont été pris pour éviter une augmentation du « temps d’écran » : 
+les contenus affichés ne nécessitent pas plus de quelques minutes de lecture,
+le chargement des pages suivantes n’est pas déclenché de manière automatique (par ce que certains appellent le « scrolling infini »),
+aucune notification n’incite le lecteur à revenir consulter l’application.
