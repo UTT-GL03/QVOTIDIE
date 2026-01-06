@@ -116,10 +116,10 @@ Le seul modèle alternatif, est celui de *Reporterre*, totalement gratuit mais b
 Tab. 3 : Source de revenus possibles pour le service d'un quotidien national.
 
 [^1]: Moins si engagement annuel.
-[^abonnement]: Basé sur l'abonnement mensuel du *Figaro* et du *Monde* (12,99€), de *La Croix* (12,90€), de *Libération* (11,90€), de *L'Humanité* (11€), 
-[^salaire]: Basé sur le coût total employeur du salaire médian 2025 soit 3569€ environ (source : [URSSAF](https://mon-entreprise.urssaf.fr/simulateurs/salaire-brut-net)) 
+[^abonnement]: Basé sur l'abonnement mensuel du *Figaro* et du *Monde* (12,99€), de *La Croix* (12,90€), de *Libération* (11,90€), de *L'Humanité* (11€).
+[^salaire]: Basé sur le coût total employeur du salaire médian 2025 soit 3569€ environ (source : [URSSAF](https://mon-entreprise.urssaf.fr/simulateurs/salaire-brut-net)).
 [^encart]: Basé sur le prix d'un bandeau court à la une d'un numéro de *La Croix* (source : [Bayard](https://www.bayardmediadeveloppement.com/wp-content/uploads/2024/08/2024.10.02-TARIFS-LA-CROIX-2025.pdf)) en 80 000 exemplaires papier et 80 000 vues sur le site (source : [Bayard](https://www.bayardmediadeveloppement.com/wp-content/uploads/2024/08/2025.008-Galaxie-LaCroix.pdf)).
-[^RPM]: L'estimation utilisée ici est basée sur le revenu pour mille vues en Allemagne en 2023 (source : [AdCPMRates](https://adcpmrates.com/2022/09/07/adsense-cpm-and-cpc-rates-in-germany-2023/).
+[^RPM]: L'estimation utilisée ici est basée sur le revenu pour mille vues en Allemagne en 2023 (source : [AdCPMRates](https://adcpmrates.com/2022/09/07/adsense-cpm-and-cpc-rates-in-germany-2023/)).
 
 L'étude de l'offre des quotidiens nous a permis d'identifier les sources de revenu communément utilisées (cf Tab. 2). Associées à un bref état de l'art (cf. Tab.3), nous avons pu établir que :
 
@@ -355,7 +355,7 @@ Cependant, la centaine de clics qui serait nécessaire rend ce scénario d'utili
 d'autant plus que les titres les plus récents sont affichés en premier.
 
 Pour résumer, le passage à l'échelle de 25 articles de presse à 3000 (correspondant respectivement aux données d'une journée et de 4 mois), avait entraîné un triplement de la consommation électrique.
-Par des techniques simples de base de données (sélection du document pertinent, projection des attributs nécessaires et pagination des résultats), la consommation électrique est revenue a ses valeurs initiales.
+Par des techniques simples de base de données (sélection du document pertinent, projection des attributs nécessaires et pagination des résultats), la consommation électrique est revenue à ses valeurs initiales.
 En l'état, la consommation électrique est constante par rapport à la volumétrie des articles de journal, et à un niveau si bas que la part due au CPU, à la mémoire et au réseau est négligeable par rapport à celle de l'écran.
 
 L'enjeu dans les améliorations à venir de l'application sera de veiller à conserver cette sobriété.
@@ -371,7 +371,7 @@ Maintenant que nous disposons d’un produit minimum viable sobre et passant à 
 __Fig.5__ : Prototype de la page d’une rubrique (copie d’écran).
 
 ![Prototype de la page d'une rubrique](./docs/headlines_screenshot_bootstrap.png)
-__Fig.6__ : Prototypes de la page des titres avec *Bootstrap* plutôt que *PicoCSS*.
+__Fig.6__ : Prototype de la page des titres avec *Bootstrap* plutôt que *PicoCSS*.
 
 Avec l’ajout de la nouvelle fonctionnalité, les mesures (des anciennes fonctionnalités) sont inchangées. 
 La consultation de la page d’une rubrique a par ailleurs la même consommation énergétique que celle des titres.
@@ -408,7 +408,7 @@ Dans ce projet, le choix de conception le plus efficace pour réduire le nombre 
 Le modèle économique du service a été revu pour être basé principalement sur les abonnements et être complété par quelques rares publicités, en régie interne (pour une meilleure valorisation et pour être en capacité de n’accepter que les publicités pour des services ou produits compatibles avec nos principes de sobriété). 
 Un second choix de conception a été de renoncer aux vignettes couramment associées aux articles (ce qui n’empêche pas ponctuellement d’illustrer un article par une véritable photographie de presse).
 Du point de vue de l’implémentation, côté-serveur, la sélection des enregistrements pertinents et la pagination a permis de conserver une taille des données échangées, faible et constante malgré une augmentation croissante des données stockées.
-Enfin, nous avons pu mettre en évidence que le choix des bibliothèques de programmation (*PicoCSS* plutôt que *Boostrap*) avait un effet non négligeable sur la taille des données échangées et donc sur la consommation énergétique.
+Enfin, nous avons pu mettre en évidence que le choix des bibliothèques de programmation (*PicoCSS* plutôt que *Boostrap*) avait un effet non négligeable sur la taille des téléchargements et donc sur la consommation énergétique.
 
 Le troisième point, également révélé par les mesures de *GreenFrame*, porte sur la différence de consommation énergétique entre le côté client et le côté serveur et ce essentiellement en raison de la part de la consommation due à l’écran.
 Dans le cas de notre application Web pour laquelle nous avons choisi de réaliser le rendu côté-client (*client-side rendering*) et où les données sont indexées côté-serveur par une algorithme *Map/Reduce*, la consommation énergétique du serveur est 24 fois plus faible que celle du client.
