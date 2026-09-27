@@ -60,3 +60,24 @@ L'EcoIndex d'une page (de A à G) est calculé (sources : [EcoIndex](https://www
 
 Nous avons choisi de comparer l'impact des scénarios sur les services de quotidiens nationaux de diverses sensibilités politiques, économiques et environnementales : **Le Figaro**, **Le Monde**, **La Croix**, **Libération**, **L'Humanité** et enfin **Reporterre**, à titre de comparaison, même si ce n'est pas à proprement parler un quotidien.
 
+| Service | Score (sur 100) | Classe | Détail des mesures
+| --- | --: | --: | --:
+| Le Figaro | 33 | E 🟥 | […](./benchmark/LeFigaro/ecoindex-environmental-statement.md)
+| Le Monde | 47 | D 🟧 |  […](./benchmark/LeMonde/ecoindex-environmental-statement.md)
+| La Croix | 27 | E 🟥 | […](./benchmark/LaCroix/ecoindex-environmental-statement.md)
+| Libération | 35 | E 🟥 | […](./benchmark/Liberation/ecoindex-environmental-statement.md)
+| L'Humanité | 17 | F 🟪 | […](./benchmark/LHumanite/ecoindex-environmental-statement.md)
+| Reporterre (à titre de comparaison) | 55 | D 🟧 | […](./benchmark/Reporterre/ecoindex-environmental-statement.md)
+
+Tab.1 : Mesure de l'EcoIndex moyen de services de quotidiens nationaux.
+
+Les mesures de l'impact moyen de ces services (cf. Tab.1) révèlent des classes EcoIndex très faibles pour la plupart (E ou F) et médiocres pour certains (D).
+
+Dans le détail, les pages les plus mal classées sont celles qui incluent : 
+
+- une vidéo,
+- des traqueurs en très grand nombre (pour la revente de données de consultation à des tiers),
+- des publicités en grand nombre.
+
+À l'inverse, le bon classement (B) de certaines pages (rubriques, articles) de Reporterre montre qu'il existe une marge de progression significative à condition d'adopter des pratiques d'éco-conception et un modèle économique permettant de réduire (totalement ou partiellement) le recours à des services tiers de traqueurs et de publicité.
+
