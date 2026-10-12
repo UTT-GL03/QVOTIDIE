@@ -153,3 +153,8 @@ Afin de s'assurer qu'il s'agit bien d'objets du métier, les termes choisis sont
 ![Maquette des deux types de page](./docs/mockup.png)
 __Fig. 1__: Maquette de l'interface du prototype : __a.__ type de page pour les "titres" (du jour ou d'une rubrique), __b.__ type de page d'un article.
 
+Dans un objectif de sobriété environnementale, les articles sont pour l'instant limités à ceux du jour et de la veille (soit `20` à `30` articles).
+
+Pour des raisons de respect des droits d'auteurs, nous utilisons des données générées (avec [`dummy-json`](https://github.com/webroo/dummy-json/blob/master/README.md)).
+Bien que fictives, ces données correspondent à la structure des services concurrents : les articles comportent un titre possiblement long, un auteur et une rubrique (voir [modèle de données](https://github.com/UTT-GL03/QVOTIDIE/blob/fe54952dd9283c85e96f3f2f7a6b32868895bb3f/sample_data.hbs)).
+
