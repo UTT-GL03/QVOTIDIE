@@ -138,3 +138,12 @@ Par conséquent, pour réduire l'impact écologique du service, nous proposons d
 - d'adopter un modèle basé principalement sur les abonnements,
 - de le compléter par un bandeau publicitaire (pour les non abonnés) géré par une régie intégrée.
 
+## Maquette de l'interface et échantillon de données
+
+Au vu des différents services comparés, des exigences environnementales exprimées plus haut et des scénarios retenus, nous allons définir pour notre prototype une maquette de l'interface et un échantillon de données réalistes.
+
+Conformément aux standards du Web, les "écrans" de notre application sont la *représentation* en HTML des types de *ressources* de notre domaine :
+
+- la "une" du journal (avec une HTTP-URI ayant pour chemin `/`) ou, plus spécifiquement, d'une rubrique thématique (avec pour chemin `/?topic={name}`),
+- un article du journal (avec pour chemin `/{id}`).
+
