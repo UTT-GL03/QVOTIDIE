@@ -147,3 +147,9 @@ Conformément aux standards du Web, les "écrans" de notre application sont la *
 - la "une" du journal (avec une HTTP-URI ayant pour chemin `/`) ou, plus spécifiquement, d'une rubrique thématique (avec pour chemin `/?topic={name}`),
 - un article du journal (avec pour chemin `/{id}`).
 
+Pour chacun de ces écrans, la maquette ci-dessous (cf. **Fig. 1**) définit la structure et les noms des composants à implémenter.
+Afin de s'assurer qu'il s'agit bien d'objets du métier, les termes choisis sont ceux du domaine du journalisme.
+
+![Maquette des deux types de page](./docs/mockup.png)
+__Fig. 1__: Maquette de l'interface du prototype : __a.__ type de page pour les "titres" (du jour ou d'une rubrique), __b.__ type de page d'un article.
+
