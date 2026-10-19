@@ -158,3 +158,67 @@ Dans un objectif de sobriété environnementale, les articles sont pour l'instan
 Pour des raisons de respect des droits d'auteurs, nous utilisons des données générées (avec [`dummy-json`](https://github.com/webroo/dummy-json/blob/master/README.md)).
 Bien que fictives, ces données correspondent à la structure des services concurrents : les articles comportent un titre possiblement long, un auteur et une rubrique (voir [modèle de données](https://github.com/UTT-GL03/QVOTIDIE/blob/fe54952dd9283c85e96f3f2f7a6b32868895bb3f/sample_data.hbs)).
 
+## Implémentation du scénario prioritaire
+
+### Étape de prototypage : Données chargées de manière statique
+
+Pour cette première version du prototype (`v1.0.0`) :
+
+- l'échantillon de données est encore chargé dans le code de manière statique,
+- les fonctionnalités implémentées ne sont que celles nécessaires pour suivre le scénario prioritaire ("Lire des articles parmi les articles du jour").
+
+Ce scénario nécessite de pouvoir naviguer entre deux types de page : la page des titres et les pages des articles.
+
+### Page des titres
+
+Nous avons développé la page des titres (cf. Fig. 2) pour qu'elle affiche l'échantillon de données sous une forme proche de ce que prévoyait la maquette.
+
+![Prototype de la page des titres](./docs/headlines_screenshot.png)
+__Fig.2__: Prototype de la page des titres.
+
+Pour l'instant, nous avons choisi un *framework* de mise en page minimaliste ([*PicoCSS*](https://picocss.com)).
+Dans la suite du projet, nous verrons si l'impact environnemental du passage à un *framework* de mise en page plus puissant (comme [*Bootstrap*](https://getbootstrap.com)) est acceptable.
+
+De même, nous avons décidé, contrairement à l'ensemble des services concurrents, de ne pas inclure de photographies dans cette page.
+Même si ces photographies ont probablement un impact sur l'attention portée à un article, elles ne sont pas strictement requises pour la consultation des titres et ne sont donc pas incluses dans le produit minimum viable.
+Si une telle fonctionnalité devait par la suite être introduite, il faudrait mettre en balance son utilité et son impact *a priori* important.
+En effet, à moins de mettre en place des techniques avancées d'optimisation (et possiblement ambivalentes) comme les [*sprites* en CSS](https://fr.wikipedia.org/wiki/Sprite_(jeu_vidéo)#Sprite_CSS) ou le multiplexage dans [HTTP/2](https://en.wikipedia.org/wiki/HTTP/2) (cf. Wikipédia), une requête supplémentaire est nécessaire pour chaque image.
+
+Dans l'état actuel du prototype, il est possible d'avoir une première idée de l'impact environnemental du *frontend*.
+Bien entendu, il manque encore le chargement dynamique des données, mais nous pouvons déjà évaluer l'impact de l'affichage des données et du *framework* (au sens large : *React*, *PicoCSS*, *DayJS*).
+Cette évaluation de l'impact (cf. Tab.4) est déjà encourageante en mode "développement" mais encore plus en mode "pré-production".
+Nous mesurons ici l'effet positif de l'adoption d'outils de développement Web intégrant la ["minification"](https://fr.wikipedia.org/wiki/Minification) (cf. *Wikipédia*) du code et la concaténation du code d'une part et des feuilles de style d'autre part.
+
+|   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
+|---|--------:|------------:|--------------:|---------:|---------------------:
+| Mode "développement"  | 75 B 🟩 |  1,5 | 191 | 26 | 2232
+| Mode "pré-production" | 88 A 🟦 | 1,2 | 190 | 4 | 125
+
+__Tab.4__: Évaluation de l'impact du prototype de la page d'accueil.
+
+### Pages des articles
+
+Les pages des articles ont pour HTTP-URI `/{id}`.
+Comme l'échantillon de données ne comportait pas d'identifiants pour les articles, nous avons adopté pour l'instant leur horodatage en tant qu'identifiant.
+
+De même que précédemment, nous avons tenté d'implémenter cette page (cf. Fig. 3) conformément à ce que prévoyait la maquette.
+Notons que nous n'avons pas inclu le choix des rubriques puisque cette fonctionnalité n'est pas incluse dans le scénario prioritaire.
+
+![Prototype de la page d'un article](./docs/article_screenshot.png)
+__Fig.3__: Prototype de la page d'un article.
+
+Avec l'ajout de ce modèle de page et la mise en place de la navigation entre les deux modèles, il devient possible d'exécuter le scénario prioritaire complet et de mesurer son impact.
+
+|   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
+|---|--------:|------------:|--------------:|---------:|---------------------:
+| 1. Consulter les titres 					   | 88 A 🟦 | 1,2 | 190 | 4 | 125
+| 2. Choisir et lire un article 			   | 96 A 🟦 | 1,1 |  24 | 4 | 1
+| 3. Revenir aux titres et les consulter	| 89 A 🟦 | 1,2 | 190 | 4 | 1
+| 4. Choisir et lire un autre article 		| 96 A 🟦 |  1,1|  22 | 4 | 1
+
+__Tab.5__: Évaluation de l'impact du scénario "Lire des articles parmi les articles du jour" dans le prototype v1.0.0.
+
+Ces estimations bien qu'artificiellement basses (puisque les données sont chargées de manière statique) sont tout de même à comparer avec [celles des services concurrents](https://htmlpreview.github.io/?https://raw.githubusercontent.com/UTT-GL03/QVOTIDIE/main/benchmark/benchmark.html) vues précédemment.
+
+Si nous arrivons à maintenir les émissions en dessous de 1,3 g par page pour notre produit minimum viable, nous pouvons donc espérer proposer une alternative environ 2 fois moins impactante que les services existants (en incluant pourtant la participation au cycle de vie du terminal).
+
